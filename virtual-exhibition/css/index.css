@@ -763,13 +763,14 @@ img {
 @media only screen and (min-width: 769px) {
   .mainvisual-area {
     background: transparent url(../images/index/mainvisual_bg_pc.png) bottom center no-repeat;
-    background-size: 1200px;
+    background-size: cover;
   }
 }
 
 @media only screen and (max-width: 767px) {
   .mainvisual-area .inner {
     padding: 0;
+    position: relative;
   }
 }
 
@@ -785,8 +786,40 @@ img {
   }
 }
 
-area.service01 {
-  background: #000;
+.flag-l {
+  position: absolute;
+  top: 25px;
+  left: -100px;
+}
+
+@media only screen and (max-width: 767px) {
+  .flag-l {
+    display: none;
+  }
+}
+
+.index-logo {
+  position: absolute;
+  top: 30px;
+  left: calc((100% - 529px) / 2);
+}
+
+@media only screen and (max-width: 767px) {
+  .index-logo {
+    display: none;
+  }
+}
+
+.flag-r {
+  position: absolute;
+  top: 25px;
+  right: -100px;
+}
+
+@media only screen and (max-width: 767px) {
+  .flag-r {
+    display: none;
+  }
 }
 
 /* product area */
@@ -832,20 +865,20 @@ area.service01 {
 
 .product-list li a {
   display: block;
-  transition-duration: 0.8s;
-  transition-timing-function: ease-out;
+  transition-duration: 0.1s;
+  transition-timing-function: ease-in;
 }
 
 .product-list li a:hover {
   transform: scale(1.2);
-  transition-duration: 0.3s;
+  transition-duration: 0.5s;
   transition-timing-function: ease;
 }
 
 .product-list li.prod01 {
   top: 0;
   left: 155px;
-  animation: flow01 10.5s linear infinite;
+  animation: flow01 5s ease-in infinite;
 }
 
 .product-list li.prod02 {
@@ -863,7 +896,7 @@ area.service01 {
 .product-list li.prod04 {
   top: 150px;
   left: 30px;
-  animation: flow04 16.5s linear infinite;
+  animation: flow04 16.5s ease-in infinite;
 }
 
 .product-list li.prod05 {
@@ -887,19 +920,19 @@ area.service01 {
 .product-list li.prod08 {
   top: 317px;
   left: 156px;
-  animation: flow08 6.9s linear infinite;
+  animation: flow08 6.9s ease-in infinite;
 }
 
 .product-list li.prod09 {
   top: 317px;
   left: 410px;
-  animation: flow09 11.6s linear infinite;
+  animation: flow09 4s linear infinite;
 }
 
 .product-list li.prod10 {
   top: 317px;
   left: 667px;
-  animation: flow10 9.6s linear infinite;
+  animation: flow10 5s linear infinite;
 }
 
 @keyframes flow01 {
@@ -907,7 +940,7 @@ area.service01 {
     transform: translateY(0);
   }
   20% {
-    transform: translateY(-5px);
+    transform: translateY(-19px);
   }
   90% {
     transform: translateY(0);
@@ -922,7 +955,7 @@ area.service01 {
     transform: translateY(0);
   }
   40% {
-    transform: translateY(4px);
+    transform: translateY(-25px);
   }
   80% {
     transform: translateY(0);
@@ -937,7 +970,7 @@ area.service01 {
     transform: translateY(0);
   }
   24% {
-    transform: translateY(-3px);
+    transform: translateY(-15px);
   }
   48% {
     transform: translateY(0);
@@ -952,7 +985,7 @@ area.service01 {
     transform: translateY(0);
   }
   33.33333% {
-    transform: translateY(-6px);
+    transform: translateY(-9px);
   }
   66.66667% {
     transform: translateY(0);
@@ -967,7 +1000,7 @@ area.service01 {
     transform: translateY(0);
   }
   25% {
-    transform: translateY(-3px);
+    transform: translateY(-21px);
   }
   75% {
     transform: translateY(0);
@@ -982,7 +1015,7 @@ area.service01 {
     transform: translateY(0);
   }
   40% {
-    transform: translateY(-4px);
+    transform: translateY(-13px);
   }
   60% {
     transform: translateY(0);
@@ -997,7 +1030,7 @@ area.service01 {
     transform: translateY(0);
   }
   30% {
-    transform: translateY(-2px);
+    transform: translateY(-18px);
   }
   60% {
     transform: translateY(0);
@@ -1012,7 +1045,7 @@ area.service01 {
     transform: translateY(0);
   }
   40% {
-    transform: translateY(-3px);
+    transform: translateY(-13px);
   }
   80% {
     transform: translateY(0);
@@ -1027,7 +1060,7 @@ area.service01 {
     transform: translateY(0);
   }
   10% {
-    transform: translateY(-1px);
+    transform: translateY(-15px);
   }
   90% {
     transform: translateY(0);
@@ -1042,7 +1075,7 @@ area.service01 {
     transform: translateY(0);
   }
   40% {
-    transform: translateY(-10px);
+    transform: translateY(-17px);
   }
   80% {
     transform: translateY(0);
