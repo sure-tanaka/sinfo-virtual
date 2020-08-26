@@ -249,47 +249,47 @@ img {
     &.prod01{
       top: 0;
       left: 155px;
-      animation: flow01 5s ease-in infinite;
+      animation: flow1 5s ease-in infinite;
     }
     &.prod02{
       top: 0;
       left: 405px;
-      animation: flow02 9.6s linear infinite;
+      animation: flow2 9.6s linear infinite;
     }
     &.prod03{
       top: 0;
       left: 655px;
-      animation: flow03 12.8s linear infinite;
+      animation: flow3 12.8s linear infinite;
     }
     &.prod04{
       top: 150px;
       left: 30px;
-      animation: flow04 16.5s ease-in infinite;
+      animation: flow4 16.5s ease-in infinite;
     }
     &.prod05{
       top: 150px;
       left: 280px;
-      animation: flow05 7s linear infinite;
+      animation: flow5 7s linear infinite;
     }
     &.prod06{
       top: 150px;
       left: 530px;
-      animation: flow06 11.8s linear infinite;
+      animation: flow6 11.8s linear infinite;
     }
     &.prod07{
       top: 150px;
       left: 780px;
-      animation: flow07 12.4s linear infinite;
+      animation: flow7 12.4s linear infinite;
     }
     &.prod08{
       top: 317px;
       left: 156px;
-      animation: flow08 6.9s ease-in infinite;
+      animation: flow8 6.9s ease-in infinite;
     }
     &.prod09{
       top: 317px;
       left: 410px;
-      animation: flow09 4s linear infinite;
+      animation: flow9 4s linear infinite;
     }
     &.prod10{
       top: 317px;
@@ -299,66 +299,58 @@ img {
   }
 }
 
-@keyframes flow01 {
-  0% { transform: translateY(0) }
-  20% { transform: translateY(-19px) }
-  90% { transform: translateY(0) }
-  100% { transform: translateY(0) }
+@for $i from 1 through 10 {
+  @keyframes flow#{$i} {
+    0%, 100%{
+      transform: translateY(0)
+    }
+    40% { 
+      transform: translateY( random(100) * -0.3px)
+    }
+  }
 }
-@keyframes flow02 {
-  0% { transform: translateY(0) }
-  40% { transform: translateY(-25px) }
-  80% { transform: translateY(0) }
-  100% { transform: translateY(0) }
+
+
+$colors :#ef8029, #fce992, #0a509f;
+
+$num : 0;
+@each $color in $colors {
+  $num: $num + 1;
+  .ball#{$num}{
+    position: fixed;
+    left: random(200) + 10px;
+    top: random(100) + 10px;
+    width: random(10) + 10px;
+    height: random(10) + 10px;
+    background-color: $color;  
+    border-radius: 50%;
+    z-index: 5;
+    opacity: 0;
+    box-shadow: 0 0 1vw 1vw $color;
+    animation: flash#{$num} .2s ease alternate infinite;
+
+  }
+
+  @keyframes flash#{$num} {
+    0%{
+      opacity: 0;
+    }
+    100%{
+      opacity: 1;
+    }
+  }
 }
-@keyframes flow03 {
-  0% { transform: translateY(0) }
-  24% { transform: translateY(-15px) }
-  48% { transform: translateY(0) }
-  100% { transform: translateY(0) }
-}
-@keyframes flow04 {
-  0% { transform: translateY(0) }
-  33.33333% { transform: translateY(-9px) }
-  66.66667% { transform: translateY(0) }
-  100% { transform: translateY(0) }
-}
-@keyframes flow05 {
-  0% { transform: translateY(0) }
-  25% { transform: translateY(-21px) }
-  75% { transform: translateY(0) }
-  100% { transform: translateY(0) }
-}
-@keyframes flow06 {
-  0% { transform: translateY(0) }
-  40% { transform: translateY(-13px) }
-  60% { transform: translateY(0) }
-  100% { transform: translateY(0) }
-}
-@keyframes flow07 {
-  0% { transform: translateY(0) }
-  30% { transform: translateY(-18px) }
-  60% { transform: translateY(0) }
-  100% { transform: translateY(0) }
-}
-@keyframes flow08 {
-  0% { transform: translateY(0) }
-  40% { transform: translateY(-13px) }
-  80% { transform: translateY(0) }
-  100% { transform: translateY(0) }
-}
-@keyframes flow09 {
-  0% { transform: translateY(0) }
-  10% { transform: translateY(-15px) }
-  90% { transform: translateY(0) }
-  100% { transform: translateY(0) }
-}
-@keyframes flow10 {
-  0% { transform: translateY(0) }
-  40% { transform: translateY(-17px) }
-  80% { transform: translateY(0) }
-  100% { transform: translateY(0) }
-}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
