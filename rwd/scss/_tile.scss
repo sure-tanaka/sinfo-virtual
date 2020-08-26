@@ -1,0 +1,78 @@
+@charset "UTF-8";
+/**
+ * tile
+ */
+
+.tile {
+
+    @include media(small) {
+        @include clearfix;
+    }
+}
+
+/**
+ * entries-tile
+ */
+
+.entries-tile {
+
+    @include media(small) {
+        margin: 6px;
+    }
+}
+
+/**
+ * entry-tile
+ */
+
+.entry-tile {
+    width: 50%;
+    padding: 4px;
+
+    @include media(gte-middle) {
+        float: none;
+        width: 180px;
+        height: 181px;
+    }
+
+    &.mod-dual {
+        width: 100%;
+
+        @include media(gte-middle) {
+            width: 360px;
+        }
+    }
+
+    .inner-tile {
+        position: relative;
+        display: block;
+        height: 100%;
+        width: 100%;
+        border: 4px solid #ffffff;
+        background-color: $background-color-white;
+		
+		&.yellow-border{
+        border: 4px solid #ffe342;
+		}
+
+        img {
+            @include transition;
+            width: 100%;
+
+            &:hover {
+                opacity: .6;
+            }
+        }
+    }
+}
+
+.marker-tile-pickup {
+    position: absolute;
+    right: -1px;
+    bottom: -1px;
+    display: block;
+    width: 51px;
+    height: 51px;
+    background: url(../images/icon-pickup.png) 0 0 / 51px 51px no-repeat;
+    @include replace-text;
+}

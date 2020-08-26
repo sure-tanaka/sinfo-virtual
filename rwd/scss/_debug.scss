@@ -1,0 +1,83 @@
+@charset "UTF-8";
+/**
+ * debug
+ */
+
+.debug-media {
+    display: none;
+    &.mod-small {
+
+        @include media(small) {
+            display: block;
+        }
+    }
+
+    &.mod-lte-middle {
+
+        @include media(lte-middle) {
+            display: block;
+        }
+    }
+
+    &.mod-middle {
+
+        @include media(middle) {
+            display: block;
+        }
+    }
+
+    &.mod-gte-middle {
+
+        @include media(gte-middle) {
+            display: block;
+        }
+    }
+
+    &.mod-large {
+
+        @include media(large) {
+            display: block;
+        }
+    }
+
+    &.mod-gte-large {
+
+        @include media(gte-large) {
+            display: block;
+        }
+    }
+
+    &.mod-x-large {
+
+        @include media(x-large) {
+            display: block;
+        }
+    }
+
+    &.mod-x2-large {
+
+        @include media(x2-large) {
+            display: block;
+        }
+    }
+
+    &.mod-x3-large {
+
+        @include media(x3-large) {
+            display: block;
+        }
+    }
+    &.visible-pc {
+
+        @include media(pc) {
+            display: block;
+        }
+    }
+    &.visible-sp {
+
+        @include media(sp) {
+            display: block;
+        }
+    }
+
+}

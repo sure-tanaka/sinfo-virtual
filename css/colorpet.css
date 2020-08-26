@@ -1,0 +1,29 @@
+body         { background:white }
+tbody        { font-size: 10pt }
+body	     { margin-top: 0pt; margin-left: 0pt }
+
+font.size1   { font-size: 12pt }
+font.size2   { font-size: 14pt }
+font.size3   { font-size:  8pt }
+font.size4   { font-size: 10pt }
+
+a.class1     { text-decoration:none;             
+              color:#FF0000 }
+        
+A.class3:link { color:#1d2b7f ; 
+         text-decoration:none;}
+A.class3:visited { color:#1d2b7f ; 
+            text-decoration:none;}
+A.class3:active { color:#1d2b7f ; 
+          text-decoration:none;}
+A.class3:hover { color:#ff6666 ; 
+         text-decoration:none; }
+
+A.class4:link { color:#1d2b7f ; 
+         text-decoration:none;}
+A.class4:visited { color:#1d2b7f ; 
+            text-decoration:none;}
+A.class4:active { color:#1d2b7f ; 
+          text-decoration:none;}
+A.class4:hover { color:#ff6666 ; 
+         text-decoration:none; }

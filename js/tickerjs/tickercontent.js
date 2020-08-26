@@ -1,0 +1,1 @@
+new domticker(tickercontent, "domticker", "someclass", 4000, "fadeit")

@@ -1,0 +1,177 @@
+.resotech{
+	.visible-pc {
+		@include media(sp) {
+			display: none;
+		}
+	}
+	.visible-sp {
+		@include media(pc) {
+			display: none;
+		}
+	}
+	.mt-30 {
+		margin-top: 30px;
+	}
+	.mb-10 {
+		margin-bottom: 10px;
+	}
+	section{
+		@include media(pc) {
+			margin-bottom: 40px;
+		}
+		@include media(sp) {
+			margin-bottom: 20px;
+		}
+	}
+	&.index{
+		h1.ttl-h1{
+			@include media(pc) {
+				background:transparent url('../../partsfeeder/images/bg_ttl01.png') left top no-repeat;
+				background-size: 100%;
+			}
+		}
+		img{
+			@include media(pc) {
+				max-width: 100%;
+			}
+		}
+		.products{
+			&.column-2{
+				@include media(pc){
+					margin-top: 40px;
+				}
+				@include media(sp) {
+					margin-top: 20px;
+				}
+				@include column-num(2, 20px, 1%);
+				.col{
+					&.width70{
+						@include media(pc) {
+							width: calc(65% - 20px);
+						}
+					}
+					&.width30{
+						@include media(pc) {
+							width: 35%;
+						}
+					}
+					@include media(sp) {
+						margin-bottom: 20px;
+					}
+					dd{
+						margin-top: 5px;
+					}
+				}
+			}
+			&.mt-30{
+				margin-top: 30px;
+			}
+		}
+
+		ul.feature{
+			li{
+				position: relative;
+				font-weight: bold;
+				font-size: 1.23em;
+				padding-left: 1.3em;
+				@include media(pc) {
+					margin-bottom: 15px;
+				}
+				@include media(sp) {
+					margin-bottom: 10px;
+				}
+				&:before{
+					position: absolute;
+					content: '■';
+					font-size: 10px;
+					width: 1em;
+					height: 1em;
+					top: 5px;
+					left: 0;
+				}
+				small {
+					font-weight: normal;
+					font-size: 1.2rem;
+					@include media(sp) {
+						font-size: 1.4rem;
+					}
+				}
+				span {
+					display: inline-block;
+					margin-right: 5px;
+					padding: 2px 12px;
+					font-size: 1.4rem;
+					color: #fff;
+					background-color: #ff8700;
+					border-radius: 20px;
+					@include media(sp) {
+						width: 48%;
+						margin-top: 5px;
+						text-align: center;
+					}
+				}
+			}
+		}
+
+		.controller-main {
+			@include media(pc) {
+				display: flex;
+				.col {
+					width: 50%;
+				}
+			}
+			.ttl {
+				margin-bottom: 10px;
+				padding-bottom: 4px;
+				font-size: 2.6rem;
+				font-weight: bold;
+				line-height: 1.2em;
+				border-bottom: 2px solid #008442;
+				@include media(sp) {
+					font-size: 1.23em;
+					line-height: 1.5em;
+					padding-bottom: 0;
+				}
+			}
+			.txt {
+				@include media(pc) {
+					font-size: 1.7rem;
+				}
+				@include media(sp) {
+					margin-bottom: 10px;
+					font-size: 1.4rem;
+				}
+			}
+			img {
+				@include media(sp) {
+					width: 65%;
+				}
+			}
+		}
+
+		.controller-list {
+			margin-bottom: 20px;
+			dt {
+				margin-bottom: 10px;
+				font-size: 1.23em;
+				font-weight: bold;
+				line-height: 1.5em;
+				border-bottom: 2px solid #008442;
+			}
+			.column-center {
+        .img {
+          width: 90%;
+          margin: 0 auto;
+        }
+			}
+			.column-2 {
+				display: flex;
+				justify-content: space-between;
+        .img,
+        .txt {
+          width: 49%;
+        }
+			}
+		}
+	}
+}

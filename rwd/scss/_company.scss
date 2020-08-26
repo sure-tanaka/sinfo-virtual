@@ -1,0 +1,394 @@
+.company{
+	img{
+		@include media(sp) {
+			width: 100%;
+		}
+	}
+	/* ttl-h1 */
+	h1.ttl-h1{
+		margin-bottom: 1px;
+		color: #fff;
+		font-size: 1.8rem;
+		font-weight: bold;
+		@include media(pc) {
+			padding-left: 20px;
+			line-height: 130px;
+			background:transparent url('../../company/images/ttl01_company.png') left top no-repeat;
+			background-size: 100%;
+
+		}
+		@include media(sp) {
+			padding: 4px 10px 4px 32px;
+			margin-bottom: 20px;
+			background-size: 21px;
+			background:#008342;
+			border-top:2px solid #0e961c
+		}
+	}
+	/* ttl-h4 */
+	h4.ttl-h4{
+		font-weight: bold;
+		background: $background-color-gray-5;
+			@include media(pc) {
+			font-size: 1.4rem;
+			margin-bottom: 1px;
+			padding: 9px 16px;
+			}
+			@include media(sp){
+			font-size: 1.4rem;
+			margin-bottom: 1px;
+			padding: 9px 16px;
+			}
+	}
+	/* nav-company */
+	.nav-company{
+		background: $background-color-gray-6;
+		@include media(pc) {
+			padding: 1px;
+			margin-bottom: 20px;
+		}
+		@include media(sp) {
+			padding: 10px;
+			margin: 0px 0px 20px; 
+		}
+		li{
+			float: left;
+			text-align: center;
+			border: 1px solid $border-color-gray-1;
+			@include media(pc) {
+				width: 148px;
+				margin-right: 1px;
+				line-height: 30px;
+			}
+			@include media(sp) {
+				width: calc( (100% / 2) - 1px);
+				margin: .5px .5px 1px .5px;
+			}
+			&.nav-company-group,
+			&.nav-company-statement{
+				@include media(pc) {
+					width: 151px;
+				}
+			}
+			&.nav-company-statement{
+				a {
+					line-height: 1.1;
+					padding: 2px 10px 2px;
+					@include media(sp) {
+						padding: 6px 0 5px;
+					}
+				}
+			}
+			&:nth-child(4n) {
+				@include media(pc) {
+					margin-right: 0;
+				}
+			}
+			a{
+				display: block;
+				color: $color-black;
+				background:transparent url('../../company/images/bg-nav-company.png') left top repeat-x;
+				@include media(pc) {
+					border: 1px solid $border-color-white;
+				}
+				@include media(sp) {
+					padding: 10px;
+					border: 1px solid $border-color-gray-1;
+				}
+				&:hover{
+					@include media(pc) {
+						border: 1px solid $border-color-green-2;
+						color: $color-white;
+						background:transparent url('../../company/images/bg-nav-company_o.png') left top repeat-x;
+						transition: .3s ease-out;
+					}
+				}
+			}
+			&.on{
+				a{
+					border: 1px solid $border-color-green-2;
+					color: $color-white;
+					background:transparent url('../../company/images/bg-nav-company_o.png') left top repeat-x;
+				}
+			}
+			&:last-child{
+				a{
+					@include media(sp) {
+						padding: 10px 5px;
+					}
+				}
+			}
+		}
+	}
+	/* btn */
+	.btn-company{
+		display: inline-block;
+		border: 1px solid $border-color-gray-1;
+		line-height: 1;
+			a{
+				display: inline-block;
+				text-decoration: none;
+				border: 1px solid #eaebd8;
+				color: #3a3a3a;
+				padding: 10px 18px;
+				background:transparent url('../../company/images/bg-btn-company.png') left top repeat-x;
+
+				span{
+						background:transparent url(../../company/images/arrow-company.png)right top no-repeat;
+						background-size: contain;
+						padding-right: 20px;
+					}
+
+				&:hover{
+						filter:alpha(opacity=80);
+						-moz-opacity: 0.8;
+						opacity: 0.8;
+						transition: .3s ease-out;
+				}
+			}
+	}
+
+
+	/* table-company */
+	.table-company{
+		width: 100%;
+		border-top: 1px solid $border-color-green-1;
+		border-bottom: 1px solid $border-color-green-1;
+		border-collapse: separate;
+		margin-top: 1px;
+		tr:last-child td{
+			border-bottom: 0px;
+		}
+		th{
+			background: $background-color-green-2;
+			border-bottom: 1px solid $border-color-white;
+			padding: 6px 12px;				
+			@include media(pc) {
+				width: 170px;
+			}
+			@include media(sp) {
+				display: block;
+//				width: 100%;
+			}
+		}
+		td{
+			padding: 6px 12px;
+			@include media(pc) {
+				border-bottom: 1px dotted $border-color-green-1;
+				border-left: 1px solid #fff;
+			}
+			@include media(sp) {
+				display: block;
+				margin-bottom: 20px;
+			}
+		}
+		.table-bottom th,
+		.table-bottom td{
+				border-bottom: none;
+			}
+		&.table-enkaku{
+			th{
+				@include media(pc) {
+					width: 150px;
+				}
+			}
+		}
+		&.table-executive{
+			display : table; 
+			width: 100%;
+			table-layout: auto;
+			thead{
+				@include media(sp) {
+					display: none;
+				}
+				tr{
+					th{
+						text-align: center;
+						background: #c4e8c8;
+						&:nth-child(2n){
+							@include media(pc) {
+								width: 90px;
+							}
+						}
+					}
+				} 
+			}
+			tr{
+				position: relative;
+				&:first-child{
+					th{
+						@include media(sp) {
+							margin-top: 0;
+						}
+					}
+				}
+				@include media(pc) {
+					border-bottom: 1px dotted $border-color-green-1;
+				}
+				th{
+					background: #e8f5e9;
+					@include media(pc) {
+						vertical-align: middle;
+					}
+					@include media(sp) {
+						padding: 16px 12px;
+					}
+					&:first-child{
+						@include media(pc) {
+							width: 100px;
+							padding: 6px 12px;
+							text-align: center;
+						}
+					}
+					p{
+						-moz-text-align-last: justify;
+						text-align-last: justify;
+						text-align: justify;
+						text-justify: inter-ideograph;
+					}
+				}
+				td{
+					@include media(sp) {
+						margin-bottom: 0px;
+						padding: 10px 12px;
+						border-top: 1px dotted $border-color-green-1;
+					}
+					&:empty{
+						@include media(sp) {
+							display: none;
+						}
+					}
+					&:nth-child(3n), &:nth-child(4n){
+						@include media(sp) {
+							position: relative;
+							top: -2.5em;
+						}
+					}
+					&:nth-child(3n){
+						@include media(sp) {
+							width: 100%;
+							border-top: 0;
+							background: #f9f9f9;
+						}
+					}
+					&.bt0{
+						@include media(sp) {
+							border-top: 0;
+						}
+					}
+					span{
+						@include media(pc) {
+							display: none;
+						}
+						@include media(sp) {
+							display: block;
+							font-size: 11px;
+						}
+					}
+					&:last-child{
+						@include media(pc) {
+							width: 390px;
+							padding: 6px 6px 6px 0px;
+						}
+					}
+				}
+				th+td{
+					border-top: 0;
+					@include media(pc) {
+						width: 96px;
+						padding: 6px 0px 6px 12px;
+						vertical-align: middle;
+					}
+					@include media(sp) {
+						position: relative;
+						display: inline-block;
+						top: -3.18em;
+						left: 150px;
+						margin-bottom: 0;
+						line-height: 1em;						
+					}
+				}
+			}
+			+p{
+				@include media(pc) {
+					margin-top: 5px;
+				}
+				@include media(sp) {
+					margin-top: 10px;
+				}
+			}
+		}
+	}
+	/* border-box */
+	.border-box{
+		.fig01{
+			@include media(pc) {
+				text-align: center;
+			}
+		}
+	}
+	/* list-company */
+	.list-company{
+		@include media(pc) {
+			margin:0 10px;
+			dt{
+				font-weight: bold;
+				font-size: 1.4rem;
+				border-bottom: 1px dotted;
+				margin-bottom: 10px;
+				.normal_font{
+					font-weight: normal;
+				}
+			}
+			dd{
+				margin:0 0 50px 0;
+				&.bottom{
+					margin: 0 0 50px 0;
+				}
+				.dot{
+					border-top: 1px dotted #000;
+					padding-top: 20px;
+				}
+			}
+		}
+		@include media(sp) {
+			margin:0 10px;
+			dt{
+				font-weight: bold;
+				font-size: 1.6rem;
+				border-bottom: 1px dotted;
+				margin-bottom: 10px;
+			}
+			dd{
+				margin:0 0 40px 0;
+				&.bottom{
+					margin: 0 0 50px 0;
+				}
+				.inner-table{
+					th{
+						font-weight: normal;
+						display: block;
+					}
+					td{
+						display: block;
+						margin-bottom: 10px;
+
+						&.bottom{
+							margin-bottom: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+	/* overseas-flash */
+	.overseas-flash{
+		padding-bottom: 20px;
+	}
+	.enkaku-back{
+		color: #fff;
+		background: $background-color-green-1;
+		padding: 3px 5px;
+	}
+}
+

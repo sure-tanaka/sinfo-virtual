@@ -1,0 +1,105 @@
+.dhtmlwindow{
+	position: absolute;
+	border: 2px solid #ccc;
+	visibility: hidden;
+	background-color: white;
+	}
+
+.drag-handle{ /*CSS for Drag Handle*/
+	background:#eee url(images/win_bg.gif) repeat-x 0 0;
+	height:27px;
+	color:#000;
+	/*font-size:80%;*/
+	font-weight:bold;
+	padding:8px 0 0 5px;
+	margin:0;
+	cursor: move;
+	overflow: hidden;
+	width: auto;
+	}
+
+.drag-handle .drag-controls{ /*CSS for controls (min, close etc) within Drag Handle*/
+	position: absolute;
+	right: 1px;
+	top: 2px;
+	cursor: hand;
+	cursor: pointer;
+	}
+
+
+.drag-contentarea{ /*CSS for Content Display Area div*/
+	background-color: white;
+	color: black;
+	height: 150px;
+	padding: 10px;
+	overflow: auto;
+	}
+
+.drag-statusarea{ /*CSS for Status Bar div (includes resizearea)*/
+	border-top: 1px solid #ccc;
+	background-color: #F8F8F8;
+	height: 13px; /*height of resize image*/
+	}
+
+
+.drag-resizearea{ /*CSS for Resize Area itself*/
+	float: right;
+	width: 13px; /*width of resize image*/
+	height: 13px; /*height of resize image*/
+	cursor: nw-resize;
+	font-size: 0;
+	}
+
+.close{ margin:0 30px 5px; text-align:right;}
+
+
+
+
+
+
+
+.listarea{
+	margin:5px 10px;
+	width:480px;}
+
+
+/*.listarea table.data01{
+	font-size:80%;
+	margin-bottom:20px;
+	border-collapse:collapse; width:100%;}
+
+
+.listarea table.data01 th,
+.listarea table.data01 td{ padding:5px; text-align:left; font-weight:normal;}
+
+.data01,
+.data01 th,
+.data01 td{ border:1px solid #999999;}
+
+.data01 th{
+	width:10em;
+	background:#E3E3E3;}*/
+	
+
+.listarea table.data02{
+	font-size:80%;
+	margin-bottom:10px;
+	border-collapse:collapse; width:100%;}
+
+.listarea table.data02 caption{background-color:#4E98BE;
+	color:#fff; font-weight:bold; text-align:left;
+	padding:2px 3px 3px;
+	font-size:110%;}
+
+
+.listarea table.data02 th,
+.listarea table.data02 td{ padding:5px; text-align:left; font-weight:normal;}
+
+.data02,
+.data02 th,
+.data02 td{ border:1px solid #999999;}
+
+.data02 th{
+	width:10em;
+	background:#E8F6F9;}
+	

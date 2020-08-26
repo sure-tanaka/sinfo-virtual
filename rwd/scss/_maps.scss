@@ -1,0 +1,26 @@
+@charset "UTF-8";
+// breakpoints
+$breakpoints: (
+    // 2column liquid
+    small: 'screen and (max-width:760px)',
+    // 180px*4column 720px
+    lte-middle: 'screen and (max-width:940px)',
+    middle: 'screen and (min-width:761px) and (max-width:940px)',
+    gte-middle: 'print, screen and (min-width:761px)',
+    // 180px*5column 900px
+    lte-large: 'print, screen and (max-width:1300px)',
+    large: 'print, screen and (min-width:941px) and (max-width:1300px)',
+    gte-large: 'print, screen and (min-width:941px)',
+    // 180px*7column 1260px
+    x-large: 'screen and (min-width:1301px) and (max-width:1480px)',
+    gte-x-large: 'screen and (min-width:1301px)',
+    // 180px*8column 1440px
+    x2-large: 'screen and (min-width:1481px) and (max-width:1660px)',
+    // 180px*9column 1620px
+    x3-large: 'screen and (min-width:1661px)',
+    // ~767px .subpage SP
+    sp: 'screen and (max-width:767px)',
+    // 768px~ .subpage PC
+    pc: 'print, screen and (min-width:768px)'
+
+);

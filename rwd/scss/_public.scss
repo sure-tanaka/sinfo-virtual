@@ -1,0 +1,676 @@
+.public{
+	h1.ttl-h1{
+		@include media(pc) {
+			background:transparent url('../../public/images/bg_ttl01.png') left top no-repeat;
+		}
+		@include media(sp) {
+			background:#008342  url('../../images/icon_pulse_sp.png') 5px center no-repeat;
+			background-size: 22px;
+		}
+	}
+	img{
+		max-width: 100%;
+	}
+	&.index{
+		h3.ttl-public{
+			margin-top: 30px;
+			margin-bottom: 1px;
+		}
+		h3.ttl-h3{
+			margin-top: 30px;
+		}
+		h4.ttl-h4{
+		font-weight: bold;
+		background: $background-color-gray-5;
+			@include media(pc) {
+			font-size: 1.4rem;
+			margin-top: 30px;
+			padding: 9px 16px;
+			}
+			@include media(sp){
+			font-size: 1.4rem;
+			margin-top: 30px;
+			padding: 9px 16px;
+			}
+		}
+		.border-box{
+			img{
+				margin-top: 20px;
+			}
+		}
+		.catalogue{
+			@include media(pc) {
+				margin-top: 20px;
+			}
+			@include media(sp) {
+				margin-top: 20px !important;
+			}
+			&.column-2{
+				@include column-num(2, 20px);
+				.col{
+					&:first-child{
+						@include media(pc) {
+							text-align: right;
+						}
+					}
+					a{
+						@include media(pc) {
+							display: inline-block;
+						}
+						img{
+							@include media(sp) {
+								display: inline;
+							}
+						}
+					}
+				}
+			}
+		}
+		#cont1{
+			section{
+				@include media(sp) {
+					padding: 0px;
+				}
+			}
+			.map{
+				margin-top: 30px;
+				a{
+					@include media(pc) {
+						display: inline-block;
+					}
+					@include media(sp) {
+						display: block;
+					}
+					&:hover{
+						opacity: 0.7;
+					}
+				}
+				.t_align_c{
+					margin-top: 20px;
+					padding-bottom: 15px;
+					a{
+						@include media(pc) {
+							display: inline-block;
+						}
+					}
+				}
+			}
+			.lineup{
+				.column-2{
+					margin-top: 20px;
+					font-weight: bold;
+					@include column-num(2, 0px);
+					.col{
+						@include media(sp) {
+							margin-bottom: 0;
+						}
+					}
+				}
+			}
+		}
+		.natuene-cont, #cont2{
+			section{
+				@include media(sp) {
+					padding: 0px;
+				}
+			}
+			.pdf{
+				&.column-2{
+					margin: 20px 0px;
+					@include column-num(2, 20px);
+					.col{
+						@include media(sp) {
+							text-align: center;
+						}
+						a{
+							@include media(pc) {
+								display: inline-block;
+							}
+						}
+						&:first-child{
+							@include media(pc) {
+								width: calc(290px + 16px);
+								text-align: right;
+							}
+						}
+						&:last-child{
+							@include media(pc) {
+								width: calc(290px - 16px);
+							}
+						}
+					}
+				}
+			}
+			.tab-menu.num{
+				li{
+					@include media(sp) {
+						width: calc((( 100% - (5px * (4 - 1))) / 4) - 3px);
+					}
+					&:nth-child(3n){
+						@include media(sp) {
+							width: calc((( 100% - (5px * (4 - 1))) / 4) + 9px);
+						}
+					}
+				}
+			}
+			.natuene{
+				border: 1px solid #21a342;
+				background: #e7f6e9;
+				@include media(pc) {
+					padding: 20px;
+				}
+				@include media(sp) {
+					padding: 10px;
+				}
+				.default{
+					display: block;
+				}
+				.feature{
+					dl{
+						dt{
+							margin-top: 20px;
+							padding-bottom: 5px;
+							color: #008442;
+							font-size: 1.8rem;
+							font-weight: bold;
+							border-bottom: 1px solid #008442;
+							@include media(sp) {
+								padding-left: 1.75em;
+							}
+							span{
+								@include media(pc) {
+									margin-right: .5em;
+								}
+								@include media(sp) {
+									position: relative;
+									display: block;
+								}
+								img{
+									@include media(pc) {
+										width: 27px;
+									}
+									@include media(sp) {
+										position: absolute;
+										left: -1.75em;
+										width: 1.5em;
+										height: 1.5em;
+									}
+								}
+							}
+						}
+						dd{
+							margin-top: 10px;
+							.t_align_c{
+								margin-top: 10px;
+							}
+						}
+					}
+				}
+				.example{
+					.column-2{
+						@include column-num(2, 20px, 1%);
+						.col{
+							text-align: center;
+							@include media(pc) {
+								margin-bottom: 20px;
+							}
+							@include media(sp) {
+								margin-bottom: 2%;
+							}
+						}
+					}
+				}
+				.delivery{
+					article{
+						margin-top: 40px;
+						&:first-child{
+							margin-top: 0;
+						}
+					}
+					h3.h3-delivery{
+						font-size: 15px;
+						.l{
+							padding: 5px 10px;
+							color: #fff;
+							background:#007bbb;
+							@include media(pc) {
+								@include border-radius(20px 0px 0px 20px);
+							}
+							@include media(sp) {
+								display: block;
+								@include border-radius(20px 20px 0px 0px);
+							}
+						}
+						.r{
+							padding: 5px 10px;
+							border-radius: 0 20px 20px 0;
+							background-color: #d3edfb;
+							@include media(pc) {
+								@include border-radius(0px 20px 20px 0px);
+							}
+							@include media(sp) {
+								display: block;
+								@include border-radius(0px 0px 20px 20px);
+							}
+						}
+					}
+					h4.h4-delivery{
+						margin: 20px 0px 5px 0px;
+						padding-bottom: 5px;
+						border-bottom: 1px solid #1fa16b;
+						font-weight: bold;
+						color:#1fa16b;
+					}
+					h5{
+						font-size: 115%;
+						color: #1fa16b;
+						font-weight: bold;
+					}
+					p.energy{
+						margin-top: 10px;
+						span{
+							padding: 3px 5px;
+							border: 1px solid #00b0ec;
+							background-color: #dff2fc;
+							border-radius: 20px;
+							margin-right: 5px;
+						}
+					}
+					.performance{
+						margin: 10px 0px;
+						@include media(pc) {
+							width: 558px;
+						}
+						li{
+							text-align: right;
+							@include media(pc) {
+								display: inline-block;
+							}
+							@include media(sp) {
+								width: 100%;
+								display: block;
+								margin-top: 10px;
+							}
+							img{
+								display: block;
+								@include media(sp) {
+									max-width: 100%;
+									width: 100%;
+								}
+							}
+							&.pr10{
+								@include media(pc) {
+									padding-right: 9px;
+								}
+							}
+							&.pb10{
+								@include media(pc) {
+									padding-bottom: 10px;
+								}
+							}
+							&:first-child{
+								@include media(sp) {
+									margin-top: 0;
+								}
+							}
+						}
+					}
+					table{
+						margin: 10px 0px 20px 0px;
+						border: none;
+						tr{
+							background:#a5d4ad;
+							&.up{
+								border-bottom: 1px solid #e1efe2;
+							}
+							th{
+								border-right: 1px solid #e1efe2;
+								white-space: nowrap;
+								vertical-align: top;
+								font-weight: normal;
+								padding: 5px;
+								text-align: center;
+							}
+							td{
+								vertical-align: top;
+								padding: 5px;
+							}
+						}
+					}
+				}
+			}
+			.note{
+				margin-top: 10px;
+			}
+			section .soyokaze{
+				margin-top: 20px;
+				&.column-2{
+					@include column-num(2, 20px, 2%);
+					.col{
+						a:hover{
+							opacity: 0.7;
+							transition: 0.3s ease-out;
+						}
+					}
+				}
+			}
+			section.inq{
+				h3.ttl-h3{
+					margin-bottom: 1px;
+				}
+				.list-company{
+					padding: 10px 9px 7px;
+					border: 1px solid #DDD;
+					@include media(pc) {
+						margin:0px;
+					}
+					dt{
+						margin-bottom: 10px;
+						font-weight: bold;
+						font-size: 1.4rem;
+						border-bottom: 1px dotted;
+						@include media(sp) {
+							font-size: 1.6rem;
+						}
+					}
+					dd{
+						margin:0 0 20px 0;
+
+					}
+				}
+			}
+			.product-list{
+				li{
+					float: left;
+					text-align: center;
+					@include media(pc) {
+						width: 90px;
+						margin-right: 10px;
+					}
+					@include media(sp) {
+						width: 31%;
+						margin: 0px 1%;
+					}
+					&:last-child{
+						@include media(pc) {
+							margin-right: 0;
+						}
+					}
+				}
+			}
+			.inner-selaqua{
+				@include media(pc) {
+					height: 200px;
+					overflow: hidden;
+				}
+				.inner-selaqua-text{
+					@include media(pc) {
+						width: 390px;
+					}
+				}
+				.inner-selaqua-list{
+					@include column-num(2,0px);
+					@include media(pc) {
+						position: relative;
+						top: -80px;
+					}
+					.col{
+						&:first-child{
+							@include media(pc) {
+								margin-top: 7em;
+								width: 360px;
+							}
+							img{
+								margin-top: 0;
+								@include media(pc) {
+									max-width: 350px;
+								}
+								@include media(sp) {
+									max-width: 80%;
+								}
+							}
+						}
+						&:last-child{
+							@include media(pc) {
+								width: 190px;
+								text-align: right;
+							}
+							@include media(sp) {
+								text-align: center;
+							}
+							img{
+								margin-bottom: 5px;
+								@include media(pc) {
+									width: 145px;
+								}
+								@include media(sp) {
+									max-width: 40%;
+								}
+							}
+						}
+					}
+				}
+			}
+			.t_align_c{
+				margin-top: 20px;
+				@include media(sp) {
+					margin-bottom: 10px;
+				}
+			}
+		}
+	}
+	/*.tab-page*/
+	.tab-page{
+		&.column-2{
+			@include clearfix;
+			@include column-num(2, 4px, 1%);
+			border-bottom: 2px solid #32a94a;
+			.col{
+				display: block;
+				float: left;
+				margin-right: 4px;
+				@include media(sp) {
+					width: calc(50% - 2px);
+					background:none;
+					margin-bottom: 0;
+				}
+				a{
+					display: block;
+					text-align: center;
+					text-decoration: none;
+					font-weight: bold;
+					color: #3a3a3a;
+					background:transparent url('../../images/tab_off.png') left top no-repeat;
+					@include media(pc) {
+						width: 298px;
+						height: 40px;
+						font-size: 1.8rem;
+						line-height: 45px;
+						overflow: hidden;
+					}
+					@include media(sp) {
+						line-height: 0;
+						text-indent: -9999px;
+						background: none;
+						cursor: pointer;
+					}
+					&:hover{
+						color: #FFF;
+						background:transparent url('../../images/tab_on.png') left top no-repeat;
+						background-size: 100%;
+						opacity:1;
+						transition: none;
+					}
+					&.on{
+						color: #FFF;
+						background:transparent url('../../images/tab_on.png') left top no-repeat;
+					}
+					img{
+						@include media(sp) {
+							width: 100%;
+							height: auto;
+						}
+					}
+				}
+				&:last-child{
+					margin-right: 0;
+				}
+			}
+		}
+	}
+	&.selaqua{
+		section{
+			margin-bottom: 40px;
+		}
+		h3.ttl-h3{
+			margin: 30px 0px 20px 0px;
+		}
+		h4.ttl-h4{
+			position: relative;
+			margin: 15px 0px 3px 0px;
+			padding-left: 1em;
+			font-size: 14px;
+			box-sizing: border-box;
+			&:before{
+				position: absolute;
+				content: "";
+				display: block;
+				left: 0px;
+				content: url('../images/icn_green.gif');
+			}
+		}
+		h5.ttl-h5{
+			font-size: 16px;
+			font-weight: bold;
+			color: #009e01;
+		}
+		.table-company{
+			width: 100%;
+			border-top: 1px solid $border-color-green-1;
+			border-bottom: 1px solid $border-color-green-1;
+			border-collapse: separate;
+			margin-top: 1px;
+			tr{
+				&:last-child td{
+					border-bottom: 0px;
+				}
+			}
+			th{
+				background: $background-color-green-2;
+				border-bottom: 1px solid $border-color-white;
+				padding: 6px 12px;
+				@include media(pc) {
+					width: 170px;
+				}
+				@include media(sp) {
+					display: block;
+				}
+			}
+			td{
+				padding: 6px 12px;
+				@include media(pc) {
+					border-bottom: 1px dotted $border-color-green-1;
+					border-left: 1px solid #fff;
+				}
+				@include media(sp) {
+					display: block;
+					margin-bottom: 20px;
+				}
+			}
+		}
+		.feature{
+			margin-top: 20px;
+			@include column-num(2,0px);
+			.col{
+				&:first-child{
+					@include media(pc) {
+						width: 60%;
+					}
+				}
+				&:last-child{
+					@include media(pc) {
+						width: 40%;
+					}
+				}
+			}
+		}
+		ul.dot{
+			li{
+				position: relative;
+				padding-left: 1.5em;
+				font-size: 1.4rem;
+				&:before{
+					@include before-content('●');
+					color: #009e01;
+					font-weight: bold;
+				}
+			}
+		}
+		.illust{
+			margin-top: 20px;
+			@include column-num(2,10px);
+			.col{
+				display: inline-block;
+				box-sizing: border-box;
+				img{
+					width: 100%;
+					vertical-align: middle;
+				}
+				&:first-child{
+					margin-left: 0;
+				}
+				.border{
+					display: table-cell;
+					vertical-align: middle;
+					border: 1px solid #000;
+					@include media(pc) {
+						height: 354px;
+					}
+				}
+			}
+		}
+		.figure{
+			text-align: center;
+			img{
+				@include media(pc) {
+					width: 80%;
+				}
+				@include media(sp) {
+					width: 90%;
+				}
+			}
+		}
+		.experiment h4.ttl-h4{
+			font-size: 16px;
+			font-weight: bold;
+			&:before{
+				top: -.2em;
+			}
+		}
+		.cellphone{
+			@include column-num(2,10px);
+			margin: 20px 0px 40px 0px;
+			.col{
+				&:last-child{
+					span{
+						font-size: 12px;
+					}
+				}
+			}
+		}
+		.radius{
+			width: 22em;
+			margin-left: 1em;
+			padding: 0px 1em;
+			color: #fff;
+			font-size: 12px;
+			border-radius: 12px;
+			text-align: center;
+			background: #777;
+		}
+		sup{
+			font-size: 60%;
+			vertical-align: top;
+		}
+	}
+}

@@ -1,0 +1,128 @@
+.servo{
+	h1.ttl-h1{
+		@include media(pc) {
+			background:transparent url('../../servo/images/bg_ttl01.png') left top no-repeat;
+			background-size: 100%;
+		}
+	}
+	h4.ttl-h4{
+		font-weight: bold;
+		background: $background-color-gray-5;
+			@include media(pc) {
+			font-size: 1.4rem;
+			margin-bottom: 1px;
+			padding: 9px 16px;
+			}
+			@include media(sp){
+			font-size: 1.4rem;
+			margin-bottom: 1px;
+			padding: 9px 16px;
+			}
+	}
+	&.index{
+		#slider+p{
+			margin: 20px 0px;
+			@include media(sp) {
+				padding: 0px 10px;
+			}
+		}
+		.t_align_c{
+			display: block;
+			margin-top: 20px;
+			padding-bottom: 15px;
+			.btn.inq{
+				padding-top: 18px;
+			}
+		}
+		.products{
+			&.column-2{
+				margin: 0 0 20px 0;
+				@include media(pc) {
+				@include column-num(2, 20px);
+				}
+				.col{
+					img{
+						@include media(sp) {
+							width: 100%;
+						}
+					}
+					@include media(sp) {
+						width: 100%;
+					}
+					a:hover{
+						opacity: .7;
+						transition: 0.3s ease-out;
+					}
+				}
+				.btn-product{
+					margin-bottom: 20px;
+					text-align: center;
+				}
+				&.custom{
+					@include media(sp){
+						.col{
+							&:first-child{
+								margin-bottom: 20px;
+							}
+						}
+					}
+				}
+			}
+		}
+		.list-lineup{
+			margin-top: 1px;
+			margin-bottom: 20px;
+			padding: 14px 20px;
+			font-weight: bold;
+			border: 1px solid #ddd;
+			&.column-2{
+				@include column-num(2, 0px);
+				.col{
+					@include media(sp) {
+						margin-bottom: 0;
+					}
+				}
+			}
+		}
+		.btn-catalogue{
+			@include clearfix;
+			@include media(pc) {
+				margin: 20px auto;
+				text-align: center;
+			}
+			@include media(sp) {
+				margin: 20px 0 !important;
+			}
+			li{
+				@include media(sp) {
+					width: 100%;
+					margin: 10px auto 0px auto;
+				}
+				a{
+					@include media(sp) {
+						display: block;
+					}
+					&.book{
+						@include media(pc) {
+							padding: 0px 70px 0px 49px;
+						}
+					}
+				}
+				&:last-child{
+					@include media(pc) {
+						margin-right: 0;
+					}
+				}
+			}
+		}
+	}
+	&.ex_small{
+		h4.ttl-h4{
+			width: 555px;
+			margin-bottom: 1px;
+			padding-left: 15px;
+			border-bottom: solid 1px #0caa1f;
+			background: url(../../clutch/nonmag/spring/images/icn_green.gif) no-repeat left center;
+		}
+	}
+}

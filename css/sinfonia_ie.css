@@ -1,0 +1,38 @@
+/* CSS Document */
+
+html body{
+	font-size:83%;
+	line-height:1.5;
+	}
+html body .f_12{
+	font-size:83%;
+	}	
+html body .f_14{
+	font-size:115%;
+	letter-spacing:0;
+	}
+html body .f_18{
+	font-size:130%;
+	letter-spacing:0;
+	}
+html body .f_10{
+	font-size:85%;
+	letter-spacing:0;
+	}
+
+html body h1,
+html body h2,
+html body h3,
+html body h4,
+html body h5{
+	font-size:100%;
+	font-weight:normal;}
+
+	
+/*リスト内にリストを入れる場合や、テーブル内にテーブルを入れる際は
+IEのみその部分のフォントサイズを100%に指定する必要あり（２重にかかる）*/
+
+
+.dayoff{
+	font-family: 'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','ＭＳ Ｐゴシック','メイリオ',Meiryo,sans-serif !important;
+	}

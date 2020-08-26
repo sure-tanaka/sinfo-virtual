@@ -1,0 +1,271 @@
+.communityservice{
+	font-size: 1.4rem;
+	line-height: 2.3rem;
+
+	.page-ttl{
+		@include media(pc) {
+			padding: 30px 20px 0px 20px;
+			background:transparent url('../../communityservice/images/bg_pagettl.jpg') left top no-repeat;
+			background-size: 100%;
+		}
+		h1.ttl-h1{
+			margin: 0;
+			padding: 0;
+			@include mixin-font-smoothing;
+			@include media(sp) {
+				padding: 20px 10px 10px 10px;
+				font-size: 2.0rem;
+				background:#009744;
+			}
+		}
+		.catch{
+			color: #fff;
+				font-size: 1.3rem;
+				line-height: 2.0rem;
+			@include media(pc) {
+				margin-top: 2.5rem;
+			}
+			@include media(sp) {
+				padding: 10px;
+				background:#009744;
+			}
+		}
+		.page-contact{
+			@include media(pc) {
+				padding-top: 2.5rem;
+				line-height: 1.7rem;
+				padding-bottom: 1rem;
+				font-size: 1.2rem;
+			}
+			@include media(sp) {
+				padding: 10px;
+				font-size: 1.2rem;
+				line-height: 2.0rem;
+				background:#a1db8e;
+			}
+		}
+	}
+	.mt-30{
+		margin-top: 30px;
+	}
+	article{
+		@include clearfix;
+		position: relative;
+
+		@include media(pc) {
+			margin-top: 40px;
+		}
+		@include media(sp) {
+			margin-top: 60px;
+			margin-bottom: 3px;
+		}
+
+		span.date{
+			display: inline-block;
+			font-size: 1.2rem;
+			vertical-align: top;
+			@include media(pc) {
+				width: 6.0em;
+			}
+		}
+
+		>i{
+			display: inline-block;
+			position: relative;
+			top: .1rem;
+			margin-right: 1em;
+			width: 6em;
+			height: 2em;
+			color: #fff;
+			line-height: 2em;
+			text-align: center;
+			font-size: 10px;
+			font-weight: bold;
+			&.news{
+				background:#49b94a;
+				&:before{
+					@include before-content(お知らせ);
+					left: 1em;
+				}
+			}
+			&.community{
+				background:#49b94a;
+				&:before{
+					@include before-content(地域貢献);
+					left: 1em;
+				}
+			}
+		}
+	}
+
+
+	h3.ttl-community{
+		color: #000;
+		font-size: 1.8rem;
+		@include mixin-font-smoothing;
+		@include media(sp) {
+			line-height: 1.5;
+		}
+		span.pink{
+			color: #ff8181;
+		}
+		span.green{
+			color: #009e01;
+		}
+	}
+
+	h5.ttl-orange{
+		position: relative;
+		margin: 10px 0px 5px 0px;
+		padding-left: 1.5em;
+		font-size: 14px;
+		font-weight: bold;
+		&:before{
+			position: absolute;
+			top: .25em;
+			left: 0;
+			content: '';
+			width: .5em;
+			height: 1em;
+			line-height: 1;
+			border-left: 1em solid #ff8700;
+		}
+	}
+
+	dl.program-info{
+		@include media(sp) {
+
+		}
+		dd{
+			padding-left: 1.5em;
+		}
+	}
+	.community-list{
+		@include media(pc) {
+			display: flex;
+			flex-direction: row;
+			margin-top: 10px;
+		}
+		@include media(sp) {
+			margin-top: 15px;
+		}
+
+		.item{
+			&:last-child{
+				@include media(pc) {
+					margin-left: 30px;
+				}
+			}
+			img{
+				max-width: 100%;
+				@include media(pc) {
+					max-width: 260px;
+				}
+				@include media(sp) {
+					margin-top: 10px;
+					margin-bottom: 5px;
+					max-height: 246px;
+				}
+			}
+			p.ttl-photo{
+				@include media(pc) {
+					text-align: right;
+					font-size: 1.2rem;
+				}
+				@include media(sp) {
+					text-align: left;
+				}
+				&.txt-center {
+					text-align: center;
+				}
+			}
+		}
+
+		.photo{
+			@include media(pc) {
+				display: flex;
+				flex-direction: row;
+			}
+			li{
+				@include media(pc) {
+					height: 160px;
+					margin-left: 15px;
+				}
+				@include media(sp) {
+					margin-top: 20px;
+				}
+				&:first-child{
+					margin-left: 0;
+				}
+
+				img{
+					@include media(pc) {
+						max-width: initial;
+						width: auto;
+						height: 100%;
+					}
+				}
+			}
+		}
+		.text{
+			text-align: left;
+		}
+	}
+	.community-list.full{
+		@include media(pc) {
+			display: block;
+		}
+		.item-caption {
+			text-align: left;
+			font-size: 1.2rem;
+		}
+		.item {
+			@include media(pc) {
+				&:last-child{
+					margin-left: 0;
+				}
+			}
+		}
+		.item4 {
+			@include media(pc) {
+				margin-top: 20px;
+				display: flex;
+				justify-content: space-between;
+			}
+			.item {
+				@include media(pc) {
+					width: calc(25% - 10px);
+					img {
+						max-width: 100%;
+					}
+				}
+			}
+		}
+		.item3 {
+			@include media(pc) {
+				margin-top: 20px;
+				display: flex;
+				justify-content: space-between;
+			}
+			.item {
+				@include media(pc) {
+					width: calc(100% / 3 - 10px);
+					img {
+						max-width: 100%;
+					}
+				}
+			}
+		}
+		.item2 {
+			@include media(pc) {
+				margin-top: 20px;
+			}
+			.item {
+				@include media(pc) {
+					display: inline-block;
+					margin-right: 12px;
+				}
+			}
+		}
+	}
+}

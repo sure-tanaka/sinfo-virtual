@@ -1,0 +1,16 @@
+body         { background:white }
+tbody        { font-size: 10pt }
+body	     { margin-top: 0pt; margin-left: 0pt }
+
+
+a.class1     { text-decoration:none;             
+              color:#FF0000 }
+
+A.class4:link { color:#1d2b7f ; 
+         text-decoration:none;}
+A.class4:visited { color:#1d2b7f ; 
+            text-decoration:none;}
+A.class4:active { color:#1d2b7f ; 
+          text-decoration:none;}
+A.class4:hover { color:#ff6666 ; 
+         text-decoration:none; }

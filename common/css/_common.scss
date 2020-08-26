@@ -1,0 +1,186 @@
+@charset "UTF-8";
+html {
+	height: 100%;
+	overflow-y: scroll;
+	font-size: 62.5%;
+}
+
+body {
+	position: relative;
+	line-height: 1.5;
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "游ゴシック", YuGothic, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	font-size: 16px;
+	color: #000;
+	-webkit-text-size-adjust: 100%;
+	-webkit-print-color-adjust: exact;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+}
+
+a {
+	color: #1b7eee;
+}
+
+.font-red{
+	color: #ff0000;
+}
+.bg-gray{
+    background:#ececec;
+}
+
+/**
+ * parts
+ * common
+ */
+
+a {
+  word-break: break-all;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+sup {
+  font-size: 8px;
+}
+.center{
+    text-align: center !important;
+}
+.align-left{
+    text-align: left !important;
+}
+.align-right{
+    text-align: right !important;
+}
+/*flex-box*/
+.flex-box {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+.flex-box.align-top {
+  align-items: flex-start;
+}
+.flex-box.align-center {
+  align-items: center;
+}
+.flex-box.space-between {
+    justify-content: space-between;
+}
+.self-center{
+  align-self: center;
+}
+.hover{
+  opacity: .65;
+  transition: 0.3s ease-out;
+}
+/**
+ * layout
+ * common
+ */
+
+.inner {
+	margin: 0 auto;
+	box-sizing: border-box;
+
+	@include media(sp) {
+		width: 100%;
+		padding: 0 20px;
+	}
+	@include media(ipad) {
+        max-width: 100%;
+		width: 100%;
+		padding: 0 20px;
+	}
+    @include media(pc) {
+        max-width: 1060px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+
+
+/**
+ * middle
+
+
+.middle {
+
+	@include media(sp) {
+		padding: 0 20px;
+	}
+}
+
+.middle-home {
+//	background: url(../images/earth.png) center bottom / 1500px auto no-repeat, url(../images/pattern-x-2.png) left bottom / auto repeat-x, #cdeafa;
+	background: url(../images/earth.png) center bottom / 800px auto no-repeat, url(../images/pattern-x-2.png) left bottom / auto repeat-x, #cdeafa;
+	@include media(sp) {
+//		background: url(../images/earth.png) center bottom / auto no-repeat, url(../images/pattern-x-2.png) left bottom / auto repeat-x, #cdeafa;
+		background: url(../images/earth.png) center bottom / 100% no-repeat, url(../images/pattern-x-2.png) left bottom / auto repeat-x, #cdeafa;
+	}
+}
+
+/**
+ * upper-middle
+ *
+
+.upper-middle {
+	@include media(sp) {
+		display: none;
+	}
+}
+
+.notice-upper-middle {
+	color: $color-gray;
+	padding: 10px 4px 4px;
+}
+
+.head-notice-upper-middle {
+	font-size: 1.2rem;
+	text-align: center;
+}
+
+.content-notice-upper-middle {
+	font-size: 1rem;
+	text-align: center;
+}
+
+/**
+ * lower-middle
+ */
+
+.control-lower-middle {
+	text-align: right;
+	padding: 50px 8px 15px;
+
+	@include media(sp) {
+		padding: 50px 4px 15px;
+	}
+
+	.middle-home & {
+		padding-top: 230px;
+		@include media(sp) {
+			padding-top: 180px;
+		}
+	}
+}
+
+.button-pagetop {
+	display: inline-block;
+	position: relative;
+	padding: 4px 30px 0 0;
+	font-size: 1.2rem;
+	color: $color-black;
+
+	&:before {
+		display: block;
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 25px;
+		height: 25px;
+		content: url(../images/icon-circle-angle-w300-green-up.svg);
+	}
+}

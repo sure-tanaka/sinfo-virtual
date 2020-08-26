@@ -1,0 +1,11 @@
+/* CSS Document */
+
+.namechange.small{
+	_font-size: 71%
+	}
+	*:first-child+html .namechange.small{
+		font-size: 80%
+		}
+	head~/* */body .namechange.small{
+		font-size: 71%
+		}

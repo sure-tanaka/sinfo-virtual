@@ -1,0 +1,91 @@
+.generation{
+	h1.ttl-h1{
+		@include media(pc) {
+			background:transparent url('../../generation/images/bg_ttl01.png') left top no-repeat;
+		}
+	}
+	h3.ttl-h3{
+		margin-top: 30px;
+	}
+	&.index{
+		img{
+			@include media(pc) {
+				max-width: 100%;
+			}
+		}
+		.lead{
+			margin: 20px 0px;
+			@include media(sp) {
+				padding: 0px 10px;
+			}
+		}
+		.products{
+			margin-bottom: 20px;
+			&.column-2{
+				@include column-num(2, 20px, 1%);
+				.col{
+					@include media(pc) {
+						margin-top: 20px;
+					}
+					img{
+						&:hover{
+								opacity:0.5;
+								transition: all  0.5s ease;
+						}
+						@include media(pc) {
+							width: 100%;
+						}
+						@include media(sp) {
+							width: 100%;
+						}
+					}
+					&.full-width{
+						position: relative;
+						float: none;
+						@include clearfix;
+						clear:both;
+						@include media(pc) {
+							width: 100%;
+							margin: 0;
+							padding-top: 20px;
+						}
+						@include media(sp) {
+							width: calc(100% - 2%);
+							padding: 2% 0px 0px 0px;
+						}
+						.menu-sub{
+							@include media(pc) {
+								position: absolute;
+								bottom: 10px;
+								right: 10px;
+							}
+							@include media(sp) {
+								position: absolute;
+								right: 10px;
+								width: 40%;
+								bottom: 15%;
+							}
+
+						}
+					}
+					&.hidden{
+						display: none;
+					}
+				}
+					&.inline{
+						.col{
+							@include media(sp) {
+								margin-top: 2%;
+							}
+						}
+					}
+			}
+		}
+/*
+		.t_align_c{
+			margin-top: 20px;
+			padding-bottom: 16px;
+		}
+*/
+	}
+}

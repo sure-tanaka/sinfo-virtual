@@ -1,0 +1,62 @@
+@charset "UTF-8";
+/**
+ * nav
+ */
+.nav {
+
+    @include media(sp) {
+        display: none;
+    }
+    background:#ececec;
+
+    &.inner-nav{
+        background:#0f951c;
+    }
+}
+
+.nav-global {
+    @include clearfix;
+
+    li {
+        float: left;
+        width: 150px;
+        height: 28px;
+        background: #ffffff;;
+
+        a {
+            display: block;
+            height: 100%;
+            width: 100%;
+            @include replace-text;
+            @include transition;
+
+            &:hover {
+                opacity: .6;
+            }
+
+            &.mod-company {
+                background: url(../images/button-nav-global.gif) no-repeat;
+            }
+
+            &.mod-product {
+                background: url(../images/button-nav-global.gif) no-repeat -150px 0;
+            }
+
+            &.mod-ir {
+                background: url(../images/button-nav-global.gif) no-repeat -300px 0;
+            }
+
+            &.mod-news-release {
+                background: url(../images/button-nav-global.gif) no-repeat -450px 0;
+            }
+
+            &.mod-recruitment {
+                background: url(../images/button-nav-global.gif) no-repeat -600px 0;
+            }
+
+            &.mod-ecology {
+                background: url(../images/button-nav-global.gif) no-repeat -750px 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,159 @@
+.vehicle{
+	h1.ttl-h1{
+		@include media(pc) {
+			background:transparent url('../../vehicle/images/bg_ttl01.png') left top no-repeat;
+		}
+	}
+	&.index{
+		.flexslider{
+			.flex-control-thumbs{
+				li{
+					$mr: 2px;
+					width: calc( (100% - #{$mr}*7) / 8);
+					margin-right: $mr;
+					img{
+						@include media(pc) {
+							position: relative;
+							top: -.3px;
+						}
+					}
+					&:last-child{
+						margin-right: 0;
+					}
+				}
+			}
+		}
+		img{
+			@include media(pc) {
+				max-width: 100%;
+			}
+		}
+		.lead{
+			@include media(pc) {
+				margin: 20px 0px;
+			}
+			@include media(sp) {
+				margin-bottom: 30px;
+				padding: 0px 10px;
+			}
+		}
+		.catch{
+			margin: 10px 0px;
+			font-weight: bold;
+			@include media(pc) {
+				font-size: 14.5px;
+			}
+			@include media(sp) {
+				padding: 0px 10px;
+				font-size: 17px;
+			}
+		}
+		.tab-menu{
+			border-bottom: none;
+			@include media(sp) {
+				padding: 0px 10px;
+			}
+			li{
+				@include media(pc) {
+					width: 290px;
+					height: 37px;
+					margin-right: 20px;
+				}
+				@include media(sp) {
+					width: calc(50% - 4px);
+					margin-right: 8px;
+				}
+				a{
+					@include media(pc) {
+						width: 290px;
+						text-indent: -99999px;
+						background:transparent url(../../vehicle/images/tab01_off.png) left top no-repeat;
+						background-size: 290px;
+					}
+					&.on{
+						@include media(pc) {
+							background:transparent url(../../vehicle/images/tab01_on.png) left top no-repeat;
+							background-size: 290px;
+						}
+					}
+				}
+				&:last-child{
+					margin-right: 0;
+					a{
+						@include media(pc) {
+							background:transparent url(../../vehicle/images/tab02_off.png) left top no-repeat;
+							background-size: 290px;
+						}
+						&.on{
+							@include media(pc) {
+								background:transparent url(../../vehicle/images/tab02_on.png) left top no-repeat;
+								background-size: 290px;
+							}
+						}
+					}
+				}
+			}
+		}
+		.tab{
+			.tab-box{
+				@include media(sp) {
+					padding: 0px 10px;
+				}
+			}
+			.box{
+				margin-top: 4px;
+				border: 1px solid #d2d2d2 ;
+				@include media(pc) {
+					padding: 20px 15px 30px 15px;
+				}
+				@include media(sp) {
+					padding: 20px 10px;
+				}
+				&#cont1{
+					box-shadow:0px -4px 0px 0px #00aadf;
+				}
+				&#cont2{
+					box-shadow:0px -4px 0px 0px #f07d2b;
+				}
+				.mainvisual{
+					@include media(pc) {
+						margin-top: 30px;
+					}
+					@include media(sp) {
+						margin: 20px 0px;
+					}
+					span{
+						@include media(pc) {
+							margin-top: 3px;
+						}
+						@include media(sp) {
+							margin-top: 5px;
+						}
+					}
+				}
+			}
+			.column-2{
+				@include column-num(2, 20px);
+				.col{
+					@include media(pc) {
+						margin-top: 20px;
+					}
+					@include media(sp) {
+						margin-top: 15px;
+					}
+					a{
+						span{
+							display: block;
+							margin-top: 3px;
+						}
+						img{
+							@include media(sp) {
+								width: 100%;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

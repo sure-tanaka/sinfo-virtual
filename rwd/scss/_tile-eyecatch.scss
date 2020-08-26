@@ -1,0 +1,311 @@
+@charset "UTF-8";
+/**
+ * stamp-tile-eyecatch
+ * アイキャッチのタイル
+ */
+
+.stamp-tile-eyecatch {
+
+    @include media(small) {
+        width: 100%;
+    }
+
+    @include media(middle) {
+        width: 720px;
+        height: 496px;
+    }
+
+    @include media(gte-middle) {
+        top: 0;
+        left: 0;
+        padding: 4px;
+    }
+
+    @include media(large) {
+        width: 900px;
+        height: 436px;
+    }
+
+    @include media(gte-x-large) {
+        width: 1260px;
+        height: 362px;
+        @include clearfix;
+    }
+}
+
+/* stage-eyecatch */
+.stage-eyecatch {
+
+    @include media(small) {
+        border-top: 2px solid $border-color-green-1;
+    }
+
+    @include media(gte-large) {
+        width: 892px;
+        height: 354px;
+    }
+
+    @include media(gte-x-large) {
+        float: left;
+    }
+
+    .inner-tile {
+        position: relative;
+
+        @include media(gte-middle) {
+            border: 4px solid #ffffff;
+        }
+
+        .pan-inner-tile {
+            width: 100%;
+
+            @include media(middle) {
+                width: 704px;
+            }
+
+            @include media(gte-large) {
+                width: 884px;
+            }
+        }
+    }
+}
+
+.list-stage-eyecatch {
+
+    li {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.button-list-stage-eyecatch {
+    display: block;
+    width: 287px;
+    height: 47px;
+    position: absolute;
+    background-size: 287px 47px;
+    background-position: left top;
+    background-repeat: no-repeat;
+    @include transition;
+    @include replace-text;
+
+    &:hover {
+        opacity: .6;
+    }
+
+    &.mod-top-1 {
+        background-image: url(../images/button-stage-eyecatch-top-1.png);
+    }
+
+    &.mod-top-2 {
+        background-image: url(../images/button-stage-eyecatch-top-2.png);
+    }
+
+    @include media(small) {
+        display: none;
+    }
+
+    @include media(middle) {
+        left: 25px;
+
+        &.mod-top-1 {
+            bottom: 72px;
+        }
+
+        &.mod-top-2 {
+            bottom: 15px;
+        }
+    }
+
+    @include media(gte-large) {
+        left: 35px;
+
+        &.mod-top-1 {
+            bottom: 77px;
+        }
+
+        &.mod-top-2 {
+            bottom: 20px;
+        }
+    }
+}
+
+/* menu-eyecatch */
+.menu-eyecatch {
+
+    @include media(large) {
+        width: 892px;
+    }
+
+    @include media(gte-x-large) {
+        width: 360px;
+        height: 354px;
+        float: right;
+    }
+
+    .inner-tile {
+        height: 100%;
+
+        @include media(gte-middle) {
+            border: 4px solid #ffffff;
+        }
+
+        @include media(lte-large) {
+            border-top: none;
+        }
+
+        @include media(gte-x-large) {
+            border-left: none;
+        }
+    }
+}
+
+.list-menu-eyecatch {
+    height: 100%;
+    background: $background-color-gray-2;
+    @include clearfix;
+
+    @include media(small) {
+        padding: 3px 2px;
+    }
+
+    @include media(gte-x-large) {
+        position: relative;
+    }
+
+    li {
+        float: left;
+        width: calc(50% - 2px);
+        border: 1px solid $border-color-gray-1;
+        margin: 1px;
+        @include gradient-top-lighten($gradient-color-gray-1, 5%);
+
+        @include media(middle) {
+            width: calc(33.333% - 2px);
+        }
+
+        @include media(large) {
+            width: calc(100% / 6 - 2px);
+        }
+
+        @include media(gte-x-large) {
+            height: calc(100% / 6 - 2px);
+        }
+
+        a {
+            display: block;
+            height: 100%;
+            padding: 5px 0 5px 5px;
+            border: 1px solid $border-color-white;
+            color: $color-black;
+            @include transition;
+
+            @include media(large) {
+                padding: 2px 0 2px 2px;
+            }
+
+            span {
+                display: table-cell;
+                vertical-align: middle;
+                font-size: $font-size-small;
+                font-weight: bold;
+                height: 34px;
+                padding-left: 39px;
+                background-size: 34px 34px;
+                background-position: left top;
+                background-repeat: no-repeat;
+
+                // 航空宇宙
+                &.mod-aerospace {
+                    background-image: url(../images/icon-menu-eyecatch-aerospace.gif);
+                }
+
+                // 大型搬送システム
+                &.mod-vehicle {
+                    background-image: url(../images/icon-menu-eyecatch-vehicle.gif);
+                }
+
+                // クラッチ・ブレーキ
+                &.mod-clutch {
+                    background-image: url(../images/icon-menu-eyecatch-clutch.gif);
+                }
+
+                // モーションシステム
+                &.mod-servo {
+                    background-image: url(../images/icon-menu-eyecatch-servo.gif);
+                }
+
+                // 車両制御機器
+                &.mod-controller {
+                    background-image: url(../images/icon-menu-eyecatch-controller.gif);
+                }
+
+                // プリンタシステム
+                &.mod-printer {
+                    background-image: url(../images/icon-menu-eyecatch-printer.gif);
+                }
+
+                // クリーン搬送機器
+                &.mod-semicon {
+                    background-image: url(../images/icon-menu-eyecatch-semicon.gif);
+                }
+
+                // 自動車用試験装置
+                &.mod-mechatro {
+                    background-image: url(../images/icon-menu-eyecatch-mechatro.gif);
+                }
+
+                // 振動機
+                &.mod-vibrator {
+                    background-image: url(../images/icon-menu-eyecatch-vibrator.gif);
+                }
+
+                // パーツフィーダ
+                &.mod-partsfeeder {
+                    background-image: url(../images/icon-menu-eyecatch-partsfeeder.gif);
+                }
+
+                // 産業インフラ
+                &.mod-generation {
+                    background-image: url(../images/icon-menu-eyecatch-generation.gif);
+                }
+
+                // 社会インフラ
+                &.mod-public {
+                    background-image: url(../images/icon-menu-eyecatch-public.gif);
+                }
+
+                @include media(large) {
+                    height: 25px;
+                    padding-left: 28px;
+                    background-size: 25px 25px;
+                    font-size: 1.1rem;
+                }
+
+                @include media(gte-x-large) {
+                    height: 42px;
+                    padding-left: 47px;
+                    background-size: 42px 42px;
+                }
+            }
+        }
+
+        &.active,
+        &:hover {
+            border: 1px solid $border-color-blue-1;
+
+            a {
+                border: 1px solid $border-color-blue-1;
+            }
+        }
+    }
+}
+
+.menu-eyecatch-0 {
+    display: none;
+}

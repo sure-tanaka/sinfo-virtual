@@ -1,0 +1,96 @@
+/*sinfonia.css tuika*/
+* {
+	list-style: none;
+	margin:0;
+	padding:0;
+	}
+
+body{
+	font-family: verdana, Helvetica, arial, "Lucida Grande","Lucida Sans Unicode", "ƒqƒ‰ƒMƒmŠpƒS Pro W3", HiraKakuPro-W3, "‚l‚r ‚oƒSƒVƒbƒN", Osaka, sans-serif;
+	text-align:left;
+	}
+
+html body{	
+	font-size:12px;
+	line-height:1.6;
+	}
+html body .f_12{
+	font-size:12px;
+	}
+html body .f_14{
+	font-size:14px;
+	letter-spacing:0;
+	}
+html body .f_10{
+	font-size:10px;
+	letter-spacing:0;
+	}
+	
+html body,
+html body h1,
+html body h2,
+html body h3,
+html body h4,
+html body h5{	
+	font-size:12px;
+	font-weight:normal;
+	}
+	
+img{
+	border:none;
+	vertical-align:bottom;
+	}	
+	
+	
+	
+.wrapper{
+	background:url(../images/headerbg.gif) repeat-x 0 68px;
+	}
+.head{
+	margin:0 auto;
+	width:600px;
+	}
+	.head h1{
+		margin:0;
+		padding:20px 0 13px 21px;
+		font-size:xx-small;
+		line-height:0;
+		}
+	.head .totop{
+		margin:0;
+		padding:11px 19px 18px 0;
+		text-align:right;
+		font-size:xx-small;
+		line-height:0;
+		}
+
+.contents{
+	margin:10px auto 0;
+	width:520px;
+	border-bottom:#ddd 1px solid;
+	padding: 0 40px 30px;
+	}
+	.contents table{
+		text-align:left;
+		}
+	.dayoff{
+		margin:50px 40px 50px;
+		text-align:center;
+		}
+	.h2_green{
+		color:#03951b;
+		font-weight:bold;
+		margin:20px 0 10px;
+		}
+	
+
+
+
+.copyright{
+	color:#000;
+	text-align:center;
+	margin:0;
+	padding:10px 0 8px;
+	}
+
+	

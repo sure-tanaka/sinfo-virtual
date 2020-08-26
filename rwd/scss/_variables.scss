@@ -1,0 +1,77 @@
+@charset "UTF-8";
+// color
+
+// #333333
+$color-black: hsla(0, 0%, 20%, 1);
+// #7F7F7F
+$color-gray: hsla(0, 0%, 50%, 1);
+// #FFFFFF
+$color-white: hsla(0, 0%, 100%, 1);
+// #1D7FEF
+$color-link: hsla(212, 86%, 52%, 1);
+// #FF0000
+$color-red-1: hsla(0, 100%, 50%, 1);
+// #0E961C
+$color-green-1: hsla(126, 82%, 32%, 1);
+
+// background color
+
+// #000000
+$background-color-black: hsla(0, 0%, 0%, 1);
+// #ECECEC
+$background-color-gray-2: hsla(0, 0%, 92%, 1);
+// #EFEFEF
+$background-color-gray-3: hsla(0, 0%, 93%, 1);
+// #F0F0F0
+$background-color-gray-4: hsla(0, 0%, 94%, 1);
+// #D4D4D4
+$background-color-gray-5: hsla(0, 0%, 83%, 1);
+// #F4F4F4
+$background-color-gray-6: hsla(0, 0%, 95%, 1);
+// #7F7F7F
+$background-color-gray-7: hsla(0, 0%, 50%, 1);
+// #FFFFFF
+$background-color-white: hsla(0, 0%, 100%, 1);
+// #FF0000
+$background-color-red-1: hsla(0, 100%, 50%, 1);
+// #88B2BD
+$background-color-blue-1: hsla(193, 29%, 64%, 1);
+// #0E961C
+$background-color-green-1: hsla(126, 82%, 32%, 1);
+// #C4E8C8
+$background-color-green-2: hsla(127, 44%, 84%, 1);
+// gradient color
+
+// #ECECEC
+$gradient-color-gray-1: hsla(0, 0%, 92%, 1);
+
+// border color
+
+//
+$border-color: #4a4a4a;
+// #000000
+$border-color-black: hsla(0, 0%, 0%, 1);
+// #D1D1D1
+$border-color-gray-1: hsla(0, 0%, 82%, 1);
+// #FFFFFF
+$border-color-white: hsla(0, 0%, 100%, 1);
+// #FF0000
+$border-color-red-1: hsla(0, 100%, 50%, 1);
+// #88B2BD
+$border-color-blue-1: hsla(193, 29%, 64%, 1);
+// #0E961C
+$border-color-green-1: hsla(126, 82%, 32%, 1);
+// #99D999
+$border-color-green-2: hsla(120, 45%, 72%, 1);
+
+// font size
+$font-size-x-large: 2rem;
+$font-size-large: 1.6rem;
+$font-size: 1.4rem;
+$font-size-small: 1.2rem;
+$font-size-x-small: 1rem;
+
+// layout
+$margin-top: 3rem;
+$margin-bottom: 3rem;
+$border-radius: 3px;

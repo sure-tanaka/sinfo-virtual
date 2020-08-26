@@ -1,0 +1,222 @@
+@charset "utf-8";
+
+//-----------------------------------
+// 変数
+//-----------------------------------
+
+$font-size: 1.4rem;
+
+//色
+$color: #333333;
+$color-black: #000000;
+$color-green: #25a018;
+$color-blue: #1d77cb;
+$color-red: #e21513;
+$color-pink: #d45786;
+
+//ベンダープレフィックス
+$prefixList: -webkit-, -moz-, -ms-, -o-, null;
+
+//-----------------------------------
+// ブレイクポイント設定
+//-----------------------------------
+$bp-sp: 767px;
+$bp-ipad: 768px;
+$bp-pc: 769px;
+
+@mixin media($media-width) {
+  @if $media-width == sp {
+    @media only screen and (max-width: $bp-sp) {
+      @content;
+    }
+  }
+  @else if $media-width == ipad {
+    @media print, screen and (min-width: $bp-ipad) {
+      @content;
+    }
+  }
+  @else if $media-width == pc {
+    @media only screen and (min-width: $bp-pc) {
+      @content;
+    }
+  }
+}
+
+//-----------------------------------
+// 各デバイス表示
+//-----------------------------------
+.visible-pc {
+  @include media(pc) {
+    display: block;
+  }
+  @include media(sp) {
+    display: none;
+  }
+}
+
+.visible-sp {
+  @include media(pc) {
+    display: none;
+  }
+  @include media(sp) {
+    display: block;
+  }
+}
+
+//-----------------------------------
+// 文字サイズrem対応
+//-----------------------------------
+@mixin font-size($s:1.4) {
+  font-size:($s * 10) + px;
+  font-size:$s + rem;
+}
+
+@mixin line-height($s:1.4) {
+  line-height:($s * 10) + px;
+  line-height:$s + rem;
+}
+
+
+// テキスト置換
+@mixin replace-text {
+    word-wrap: normal;
+    white-space: nowrap;
+    text-indent: 101%;
+    overflow: hidden;
+    display: inline-block;
+}
+
+//-----------------------------------
+// clearfix
+//-----------------------------------
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+//-----------------------------------
+// hover透過
+//-----------------------------------
+@mixin hover-opacity($flag: true){
+  transition: all .15s ease;
+  &:hover{
+    @if $flag == true{
+      opacity: .65;
+    }
+    @content;
+  }
+}
+
+// トランジション
+@mixin transition($speed: 0.3s) {
+    -webkit-transition: $speed ease-out;
+    -moz-transition: $speed ease-out;
+    -o-transition: $speed ease-out;
+    transition: $speed ease-out;
+}
+
+//-----------------------------------
+// flexセット
+//-----------------------------------
+@mixin flex-set($align:flex-start, $justy:flex-start, $dir:row, $wrap:nowrap) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justy;
+  flex-direction: $dir;
+  flex-wrap: $wrap;
+}
+
+//-----------------------------------
+// margin padding width
+//-----------------------------------
+$space: 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60;
+@each $prefix in $space{
+  // top
+  .mt-#{$prefix} { margin-top: #{$prefix}px !important;}
+  .pt-#{$prefix} { padding-top: #{$prefix}px !important;}
+  // right
+  .mr-#{$prefix} { margin-right: #{$prefix}px !important;}
+  .pr-#{$prefix} { padding-right: #{$prefix}px !important;}
+  // bottom
+  .mb-#{$prefix} { margin-bottom: #{$prefix}px !important;}
+  .pb-#{$prefix} { padding-bottom: #{$prefix}px !important;}
+  // left
+  .ml-#{$prefix} { margin-left: #{$prefix}px !important;}
+  .pl-#{$prefix} { padding-left: #{$prefix}px !important;}
+  //width
+  .width-#{$prefix} { width: #{$prefix}'%';}
+}
+
+
+//-----------------------------------
+// formスタイルリセット
+//-----------------------------------
+@mixin formReset() {
+  input, button, textarea, select {
+    margin: 0;
+    padding: 0;
+    background: none;
+    border: none;
+    border-radius: 0;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    font-family: inherit;
+  }
+}
+
+//-----------------------------------
+// 背景画像
+//-----------------------------------
+$PATH_IMG: "../img/";
+
+@mixin bg-img-jpg($fileName) {
+  background-image: url($PATH_IMG + $fileName + '.jpg');
+  background-repeat: no-repeat;
+  background-position: left top;
+  @content;
+}
+
+@mixin bg-img-png($fileName) {
+  background-image: url($PATH_IMG + $fileName + '.png');
+  background-repeat: no-repeat;
+  background-position: left top;
+  @content;
+}
+
+//-----------------------------------
+// 三角形
+//-----------------------------------
+@mixin triangle($direction, $width, $height, $color){
+  width: 0;
+  height: 0;
+  border-style: solid;
+  $valWidth: $width / 2;
+  $valHeight: $height / 2;
+  @if ($direction == top) {
+    border-width: 0 $valWidth $height $valWidth;
+    border-color: transparent transparent $color transparent;
+  } @else if ($direction == left) {
+    border-width: $valHeight $width $valHeight 0;
+    border-color: transparent $color transparent transparent;
+  } @else if ($direction == right) {
+    border-width: $valHeight 0 $valHeight $width;
+    border-color: transparent transparent transparent $color;
+  } @else if ($direction == bottom) {
+    border-width: $height $valWidth 0 $valWidth;
+    border-color: $color transparent transparent transparent;
+  }
+}
+
+//-----------------------------------
+// アイコン
+//-----------------------------------
+@mixin icon {
+  content: '';
+  position: absolute;
+}
+

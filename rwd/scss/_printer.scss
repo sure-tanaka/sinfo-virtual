@@ -1,0 +1,126 @@
+.printer{
+	h1.ttl-h1{
+		@include media(pc) {
+			background:transparent url('../../printer/images/bg_ttl01.png') left top no-repeat;
+		}
+	}
+	/* ttl-h4 */
+	h4.ttl-h4{
+		font-weight: bold;
+		background: $background-color-gray-5;
+			@include media(pc) {
+			font-size: 1.4rem;
+			margin-bottom: 1px;
+			padding: 9px 16px;
+			}
+			@include media(sp){
+			font-size: 1.4rem;
+			margin-bottom: 1px;
+			padding: 9px 16px;
+			}
+	}
+	&.index{
+		#slider+p{
+			margin: 20px 0px;
+			@include media(sp) {
+				padding: 0px 10px;
+			}
+		}
+		.t_align_c{
+			display: block;
+			margin-top: 20px;
+			padding-bottom: 15px;
+		}
+		img{
+			@include media(pc) {
+				max-width: 100%;
+			}
+		}
+		.products{
+			&.column-2{
+				@include column-num(2, 20px);
+				.col{
+					margin-top: 20px;
+					img{
+						@include media(sp) {
+							width: 100%;
+						}
+						&.photo-product{
+							@include media(pc) {
+								float: left;
+								padding-right: 10px;
+							}
+						}
+					}
+					a{
+						display: inline-block;
+						&:hover{
+							opacity:1;
+						}
+					}
+				}
+			}
+		}
+		.main_products{
+			margin-top: 1px;
+			margin-bottom: 20px;
+			padding: 10px;
+			font-weight: bold;
+			border: 1px solid #ddd;
+			&.column-2{
+				@include column-num(2, 0px);
+				.col{
+
+				}
+			}
+			@include media(pc){
+				min-height: 180px;
+			}
+		}
+		.product-info{
+			@include media(pc){
+				float: left;
+			}
+			.to_link{
+				display: inline-block;
+				@include media(pc) {
+					padding: 0px 0px 0px 16px;
+					background: url(../../images/icn_arrow.gif) no-repeat left top 3px;
+				}
+				@include media(sp) {
+					padding: 0px 0px 10px 15px;
+					background: url(../../images/icn_arrow.gif) no-repeat left top 5px;
+				}
+			}
+		}
+		.printer-features{
+			li{
+				font-size: 1.1rem;
+				float: left;
+				width: 49%;
+				text-align: center;
+				line-height: 1;
+				padding: 5px 0;
+				margin-bottom: 10px;
+				background: #fb6600;
+				color: #fff;
+					&:first-child{
+						margin-right: 2%;
+					}
+					&.bottom{
+						margin-bottom: 0;
+					}
+				@include media(sp){
+					padding: 10px;
+				}
+
+				}
+			}
+		.printer-photo{
+			@include media(pc){
+				float: left;
+				margin-right: 10px;
+			}
+		}
+	}
+}

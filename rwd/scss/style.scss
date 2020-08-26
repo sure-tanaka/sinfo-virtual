@@ -1,0 +1,76 @@
+@charset "utf-8";
+/*!
+ * Theme Name: シンフォニアテクノロジー株式会社
+ * Author: 株式会社シュア
+ */
+
+// 変数
+@import "variables";
+// 変数 マップ
+@import "maps";
+// ミックスイン
+@import "mixins";
+// 初期化
+@import "reset";
+// メディア
+@import "debug";
+// 共通
+@import "common";
+// ヘッダー
+@import "header";
+// グローバルナビ
+@import "nav";
+// タイル Masonry
+@import "tile";
+// タイル Masonry アイキャッチ
+@import "tile-eyecatch";
+// タイル Masonry 新着情報
+@import "tile-news";
+// フッター
+@import "footer";
+// ドロワーメニュー mmenu
+@import "off-canvas";
+// 会社概要
+@import "company";
+// 航空宇宙
+@import "aerospace";
+// 大型搬送
+@import "vehicle";
+// クラッチ・ブレーキ
+@import "vibrator";
+// モーションシステム
+@import "servo";
+// 車両制御機器
+@import "controller";
+// プリンタシステム
+//@import "printer";
+// クリーン搬送
+@import "semicon";
+// 自動車用試験装置
+@import "mechatro";
+// 振動機
+@import "clutch";
+// パーツフィーダー
+@import "partsfeeder";
+// 産業インフラ
+@import "generation";
+// 社会インフラ
+@import "public";
+// プリンター
+@import "printer";
+// 農業関連製品
+@import "agriculture";
+// 私たちの製品紹介
+@import "product";
+// NewsRelease
+@import "newsrelease";
+// 地域貢献
+@import "communityservice";
+// 展示会情報
+@import "event";
+// 微量定量供給装置
+@import "feeder_micro";
+// パーツフィーダ トリプレート
+@import "triplate";
+// パーツフィーダ レゾテック
+@import "resotech";

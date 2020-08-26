@@ -1,0 +1,57 @@
+.feeder_micro{
+	section{
+		@include media(pc) {
+			margin-bottom: 40px;
+		}
+		@include media(sp) {
+			margin-bottom: 20px;
+		}
+	}
+	&.index{
+		h1.ttl-h1{
+			@include media(pc) {
+				background:transparent url('../../vibrator/images/bg_ttl01.png') left top no-repeat;
+				background-size: 100%;
+			}
+		}
+		dl.feature{
+			dt{
+				position: relative;
+				font-size: 20px;
+				font-weight: bold;
+				margin-top: 20px;
+				padding-left: 40px;
+				&:before{
+					position: absolute;
+					top: 36%;
+					left: 0;
+					display: block;
+					content: '';
+					width: 32px;
+					height: 10px;
+					background: url(../../vibrator/images/feeder/quantitative_icon.png) left center no-repeat;
+					background-size:100%;
+				}
+			}
+			dd{
+				span{
+					display: block;
+					margin-top: 5px;
+				}
+			}
+		}
+		ul.foruse{
+			margin-top: 5px;
+			@include media(sp) {
+				padding-bottom: 50px;
+			}
+			li{
+				padding-top: 5px;
+			}
+		}
+	}
+	sup{
+		font-size: 60%;
+		vertical-align: top;
+	}
+}

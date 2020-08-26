@@ -1,0 +1,164 @@
+@charset "UTF-8";
+/**
+ * footer
+ */
+
+.footer {
+    margin-top: 1px;
+    border-top: 1px solid #e0e0e0;
+    padding-bottom: 15px;
+
+    @include media(gte-middle) {
+        padding-top: 15px;
+    }
+}
+
+/**
+ * upper-footer
+ */
+
+.upper-footer {
+
+    @include media(gte-large) {
+        position: relative;
+    }
+}
+
+.nav-footer {
+
+    @include media(gte-middle) {
+        @include clearfix;
+    }
+
+    li {
+
+        @include media(small) {
+            border-bottom: 1px solid $border-color-white;
+        }
+
+        @include media(gte-middle) {
+            float: left;
+            padding: 0 10px;
+            border-left: 1px solid #3a3a3a;
+            border-right: 1px solid #3a3a3a;
+            font-size: $font-size-small;
+        }
+
+        & + li {
+
+            @include media(gte-middle) {
+                border-left: none;
+            }
+        }
+
+        a {
+            color: $color-black;
+
+            @include media(small) {
+                display: block;
+                height: 100%;
+                padding: 10px;
+            }
+        }
+    }
+}
+
+.small-upper-footer {
+    font-size: $font-size-small;
+
+    @include media(small) {
+        margin: 30px 10px 0;
+    }
+
+    @include media(middle) {
+        text-align: right;
+        margin-top: 15px;
+    }
+
+    @include media(gte-large) {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+}
+
+/**
+ * lower-footer
+ */
+
+.lower-footer {
+
+    @include media(gte-large) {
+        margin-top: 15px;
+        position: relative;
+    }
+}
+
+.caption-lower-footer {
+    font-size: $font-size-x-small;
+
+    @include media(small) {
+        margin: 5px 10px 0;
+    }
+}
+
+.small-site {
+    display: block;
+    font-size: $font-size-x-small;
+
+    @include media(lte-middle) {
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    @include media(gte-large) {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+}
+
+.small-site-copyright {
+
+    @include media(small) {
+        display: none;
+    }
+}
+
+.small-site-copyright-small {
+    line-height: 1;
+    vertical-align: top;
+    font-size: $font-size;
+    margin-right: .2rem;
+
+    @include media(gte-middle) {
+        display: none;
+    }
+}
+/**
+ * subpage
+ */
+.subpage{
+    .footer{
+        .inner-footer{
+            @include media(sp) {
+                width: 100%;
+            }
+            @include media(pc) {
+                width: 900px;
+                margin: 0px auto;
+                padding: 0px 10px;
+            }
+            .nav-footer{
+                margin-left: 0;
+                a{
+                    border-left: none;
+                    border-right: none;
+                    @include media(pc) {
+                        padding: 0;
+                    }
+                }
+            }
+        }
+    }
+}

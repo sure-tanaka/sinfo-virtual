@@ -1,0 +1,25 @@
+/*for ie8 09.05.27*/
+
+.new_sinfonia{
+	background:none;
+}
+
+.new_sinfonia #contents_in{
+	margin:0 0 25px 0;
+	}
+
+#footerbox_in {
+	clear:both;
+	}
+
+.footer_logo_proviso{
+	font-size:10px;
+	_font-size:9px;
+	}
+head~/* */body .footer_logo_proviso{
+	font-size:9px;
+	}
+
+*html #flash-area2010{
+	display:none;
+	}	

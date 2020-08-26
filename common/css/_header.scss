@@ -1,0 +1,352 @@
+@charset "UTF-8";
+/**
+ * header
+ */
+
+.header {
+    background: #ffffff;;
+}
+
+.inner-header {
+    position: relative;
+    @include flex-set($align:flex-start, $justy:space-between, $dir:row, $wrap:nowrap);
+    font-size: 14px;
+    font-weight: bold;
+    @include media(sp) {
+        height: 60px;
+    }
+    @include media(ipad) {
+      height: 60px;
+      margin-bottom: 0;
+    }
+    @media print, screen and (min-width: 769px) { /*pc769~*/
+      max-width: 1060px;
+      height: 70px;
+      margin-bottom: 15px;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+}
+
+.head-site {
+    @include flex-set($align:flex-end, $justy:flex-start, $dir:row, $wrap:nowrap);
+    @include media(sp) {
+      align-self: center;
+    }
+    @include media(ipad) {
+      align-self: center;
+    }
+    @media print, screen and (min-width: 769px) { /*pc769~*/
+        align-self: flex-end;
+        top: auto;
+        bottom: 5px;
+        position: relative;
+    }
+
+    a {
+        display: block;
+        width: 210px;
+        height: 38px;
+        white-space: nowrap;
+        text-indent: -99999px;
+        overflow: hidden;
+        background: url(../images/logo.png) 0 0 no-repeat;
+        background-size: 100%;
+
+        @include media(sp) {
+            width: 161px;
+            height: 31px;
+            background: url(../images/logo.png) 0 0 / 161px 31px no-repeat;
+        }
+    }
+    span{
+/*
+        position: relative;
+        top: -5px;
+*/
+        margin-left: 1em;
+        @include media(sp) {
+        display: none;
+        }
+        @include media(ipad) {
+        display: none;
+        }
+        @include media(pc) {
+        display: block;
+/*        vertical-align: text-top;*/
+        }
+    }
+
+}
+
+/**
+ * search-header
+ */
+
+.search-header {
+    position: absolute;
+    right: 0;
+    top: 20px;
+    @include clearfix;
+
+    @include media(sp) {
+        display: none;
+    }
+}
+
+.head-search-header {
+    float: left;
+    padding: 5px 10px 0 0;
+    font-size: 1.2rem;
+}
+
+#srchBox {
+    float: left;
+    width: 25rem;
+}
+
+#srchInput {
+//    width: 20rem;
+}
+
+table.gsc-search-box{
+  font-size: 11px;
+}
+
+/**
+ * nav-header
+ * googleSearch
+ */
+.nav-header {
+  display: block;
+  position: absolute;
+  right: 30px;
+  bottom: 0px;
+
+  @include media(sp) {
+      display: none;
+  }
+  @include media(ipad) {
+    display: none;
+  }
+  @media print, screen and (min-width: 769px) { /*pc*/
+    display: block;
+  }
+}
+
+
+/*
+.content-search-header .gsc-control-cse{
+  padding: 0;
+}
+.gsc-control-cse .gsc-search-box-tools .gsc-search-box .gsc-input{
+  font-size: 11px;
+  padding-right: 5px;
+}
+.gsc-search-button.gsc-search-button-v2, .gsc-search-button.gsc-search-button-v2:hover, .gsc-search-button.gsc-search-button-v2:focus{
+  padding: 5px 17px;
+  border-radius: 0px;
+  border-color: #d8d8d8 #bababa #bababa #d1d1d1;
+  background-color: #fff;
+}
+.gsc-search-button.gsc-search-button-v2 svg{
+  fill: #333;
+}
+.gsc-input-box .gsib_a{
+  padding: 4px 5px 3px 5px;
+}
+.gsc-input-box .gsib_b .gsst_b{
+  font-size: 11px;
+  padding: 0;
+}
+
+/**
+ * nav-header-worldwide
+ */
+
+.nav-header-worldwide {
+  @include flex-set($align:flex-start, $justy:flex-end, $dir:row, $wrap:nowrap);
+    li {
+        font-size: 9px;
+
+        & + li {
+            margin-left: 5px;
+        }
+
+        a {
+          display: block;
+          width: 3em;
+          height: 3em;
+          line-height: 3em;
+          text-align: center;
+          color: #fff;
+          background:#b0b0b0;
+          border-radius: 50%;
+
+          &.on, &:hover{
+            color: #fff;
+            background:#008342;
+          }
+        }
+    }
+}
+
+/**
+ * nav-header-utility
+ */
+
+.nav-header-utility {
+    @include flex-set($align:flex-start, $justy:flex-end, $dir:row, $wrap:nowrap);
+    margin-top: 20px;
+}
+
+.entry-nav-header-utility {
+    font-size: 1.2rem;
+
+    & + li {
+        margin-left: 10px;
+    }
+}
+
+.nav-header-utility li a{
+    display: block;
+    position: relative;
+    margin-left: 17px;
+    padding-left: 20px;
+    line-height: 17px;
+    font-size: 13px;
+    font-weight: normal;
+    color: #000;
+
+    &:before {
+        content:'';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0px;
+        width: 16px;
+        height: 16px;
+        background: url(../images/icon_nav_header_tri.png);
+        background-size: 100%;
+    }
+
+    &.global{
+      padding-left: 25px;
+        &:before{
+            background: url(../images/icon_nav_header_world.png);
+            background-size: 100%;
+        }
+    }
+
+    &:hover{
+      text-decoration: underline;
+    }
+}
+
+/**
+ * menu-off-canvas
+ */
+
+.button-menu-off-canvas {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    background: url(../images/icon-square-menu.svg) 0 0  no-repeat;
+    background-size: 100%;
+    @include replace-text;
+
+    @include media(sp) {
+      display: block;
+    }
+    @include media(ipad) {
+      display: block;
+    }
+    @media print, screen and (min-width: 769px) { /*pc769~*/
+      display: none;
+    }
+
+}
+
+
+/**
+ * nav グローバルナビ
+ */
+
+.inner-nav{
+  @include media(pc) {
+    position: relative;
+    width: 1000px;
+    margin: 0 auto;
+    padding: 0 40px;
+    background:#0f951c;
+    box-sizing: border-box;
+  }
+  &:before{
+    @include icon;
+    left: -40px;
+    border-style: solid;
+    border-width: 0 40px 60px 0;
+    border-color: transparent #008342 transparent transparent;
+  }
+  &:after{
+    @include icon;
+    top: 0;
+    right: -40px;
+    border-style: solid;
+    border-width: 60px 40px 0px 0;
+    border-color: #0f951c transparent transparent transparent;
+  }
+  .tri-left{
+    @include icon;
+    left: 0;
+    border-style: solid;
+    border-width: 60px 40px 0 0;
+    border-color: #008342 transparent transparent transparent;
+    @media screen and (min-width: 769px) and (max-width: 999px){ /*769~999*/
+      display: none;
+    }
+    @include media(pc) {
+        display: block;
+    }
+  }
+ }
+.nav {
+  @include media(sp) {
+      display: none;
+  }
+  @include media(ipad) {
+      display: none;
+  }
+  @media print, screen and (min-width: 769px) { /*pc769~*/
+      display: block;
+  }
+
+  background:#ececec;
+
+  .nav-global {
+    @include flex-set($align:flex-start, $justy:space-between, $dir:row, $wrap:nowrap);
+    background:#0f951c;
+    li {
+        font-size: 16px;
+        text-align: center;
+        background: #ffffff;
+          a {
+                display: block;
+                width: 100%;
+                height: 60px;
+                line-height: 60px;
+                color: #fff;
+                font-weight: bold;
+                @include transition;
+                background:#0f951c;
+/*
+                &:hover {
+                    opacity: .6;
+                }
+*/
+            }
+        }
+    }
+}

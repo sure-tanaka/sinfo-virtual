@@ -1,0 +1,225 @@
+.aerospace{
+	h1.ttl-h1{
+		@include media(pc) {
+			background:transparent url('../../aerospace/images/bg_ttl01.png') left top no-repeat;
+			background-size: 100%;
+		}
+	}
+	section{
+		@include media(sp) {
+			margin-bottom: 20px;
+		}
+	}
+	.h2-aero{
+		margin-bottom:20px;
+	}
+	.ttl-h4 {
+		font-weight: bold;
+		background: #d4d4d4;
+		font-size: 1.4rem;
+		margin-bottom: 1px;
+		padding: 9px 16px;
+	}
+	.lead{
+		position: relative;
+			@include media(pc) {
+				margin: 20px 0px 0px 0px;
+			}
+			@include media(sp) {
+				margin-top: 10px;
+				padding: 0px 10px;
+			}
+	}
+	.lead-txt+.t_align_r,
+	.lead+.t_align_r{
+		margin: 10px 0px 20px 0px;
+		@include media(sp) {
+			padding: 0px 10px;
+		}
+	}
+	&.index{
+		.lead {
+			.visible-pc {
+				@include media(sp) {
+					display: none;
+				}
+			}
+			.visible-sp {
+				@include media(pc) {
+					display: none;
+				}
+			}
+			.lead-img {
+				img {
+					width: 100%;
+				}
+			}
+			.lead-txt {
+				@include media(pc) {
+					position: absolute;
+					top: -5px;
+				}
+				@include media(sp) {
+					margin-top: 10px;
+				}
+			}
+			.lead-logo {
+				width: 100%;
+				margin: 20px auto;
+			}
+			.lead-list {
+				margin: 20px 0;
+				dt {
+					padding-bottom: 7px;
+					text-align: center;
+					font-weight: bold;
+					font-size: 2.0rem;
+					border-bottom: 2px solid #231815;
+					span{
+						@include media(sp) {
+							display: block;
+							font-size: 1.1rem;
+							font-weight: normal;
+							line-height: 1.2;
+						}
+					}
+				}
+				dd {
+					margin-top: 10px;
+				}
+				&.list01 {
+					dt {
+						color: #008242;
+						border-color: #008242;
+					}
+				}
+				&.list02 {
+					dt {
+						color: #e95504;
+						border-color: #e95504;
+					}
+				}
+				&.list03 {
+					@include media(sp) {
+						margin-bottom: 40px;
+					}
+					dt {
+						color: #008bd5;
+						border-color: #008bd5;
+					}
+				}
+			}
+		}
+		.lead-txt {
+			@include media(sp) {
+				padding: 20px 0px;
+			}
+		}
+		.main_products{
+			margin-top: 1px;
+			margin-bottom: 20px;
+			padding: 14px 20px;
+			font-weight: bold;
+			border: 1px solid #ddd;
+			&.column-2{
+				@include column-num(2, 0px);
+				.col{
+					@include media(sp) {
+						margin-bottom: 0;
+					}
+				}
+			}
+		}
+		.thum-product{
+			.column-1 {
+				margin: 20px 0 40px;
+				img {
+					width: 100%;
+				}
+			}
+			.column-2{
+				@include column-num(2, 0px, 1%);
+				.col{
+					text-align: center;
+					img{
+						@include media(pc) {
+							max-width: 70%;
+						}
+					}
+					&:first-child, &:nth-child(2){
+						min-height: 130px;
+					}
+					span{
+						display: block;
+						line-height: 1.0;
+					}
+				}
+			}
+		}
+		.bg-aerospace{
+			text-align: center;
+			@include media(pc) {
+				margin-top: 60px;
+			}
+			@include media(sp) {
+				margin-top: 40px;
+			}
+			img{
+				@include media(pc) {
+					width: 100%;
+				}
+			}
+			span{
+				display: block;
+				margin-top: 10px;
+				line-height: 1.0;
+			}
+		}
+		.aero-banner{
+			margin-top: 20px;
+			padding-top: 20px;
+			border-top: 1px solid #ccc;
+			&.column-2{
+				@include column-num(2, 20px);
+				.col{
+					a{
+						display: block;
+						&:hover{
+							opacity: .6;
+							transition: 0.2s ease-out;
+						}
+						img{
+							width: 100%;
+						}
+					}
+				}
+			}			a{
+				display: block;
+				img{
+					width: 100%;
+				}
+			}
+		}
+		.inquiry-aero{
+			text-align: center;
+			@include media(sp) {
+				margin-top: 20px;
+			}
+			@include media(pc) {
+				margin-top: 30px;
+			}
+		}
+		.t_align_c{
+			@include media(sp) {
+				margin-bottom: 20px;
+			}
+		}
+		.aero-movie {
+			margin-bottom: 40px;
+			border: 1px solid #000;
+			video {
+				width: 100%;
+			}
+		}
+	}
+}

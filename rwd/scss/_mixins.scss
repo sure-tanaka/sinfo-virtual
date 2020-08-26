@@ -1,0 +1,200 @@
+@charset "UTF-8";
+// メディアクエリ
+@mixin media($breakpoint) {
+    @media #{unquote(map-get($breakpoints, $breakpoint))} {
+        @content;
+    }
+}
+
+// フロート解除
+@mixin clearfix {
+    zoom: 1;
+
+    &:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+}
+
+// テキスト置換
+@mixin replace-text {
+    word-wrap: normal;
+    white-space: nowrap;
+    text-indent: 101%;
+    overflow: hidden;
+    display: inline-block;
+}
+
+// テキスト切詰
+@mixin truncate-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+// 角丸
+@mixin border-radius($radius: 3px) {
+    border-radius: $radius;
+}
+
+// グラデーション（上方へ向かって明るく）
+@mixin gradient-top-lighten($gradient-color: $gradient-color-gray-1, $gradient-lighten: 10%) {
+    background-color: $gradient-color;
+    background: -webkit-linear-gradient(bottom, $gradient-color 0%, lighten($gradient-color, $gradient-lighten) 100%);
+    background: linear-gradient(to top, $gradient-color 0%, lighten($gradient-color, $gradient-lighten) 100%);
+}
+
+// グラデーション（下方へ向かって明るく）
+@mixin gradient-bottom-lighten($gradient-color:$gradient-color-gray-1, $gradient-lighten :10%) {
+    background-color: $gradient-color;
+    background: -webkit-linear-gradient(top, $gradient-color 0%, lighten($gradient-color, $gradient-lighten) 100%);
+    background: linear-gradient(to bottom, $gradient-color 0%, lighten($gradient-color, $gradient-lighten) 100%);
+}
+
+@mixin mixin-font-smoothing {
+    font-weight: bold;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+// トランジション
+@mixin transition($speed: 0.3s) {
+    -webkit-transition: $speed ease-out;
+    -moz-transition: $speed ease-out;
+    -o-transition: $speed ease-out;
+    transition: $speed ease-out;
+}
+
+// ベンダープレフィックス
+$prefixList: -webkit-, -moz-, -ms-, -o-, null;
+
+@mixin prefix($name, $value) {
+  @each $prefix in $prefixList {
+    #{$prefix}#{$name}: $value;
+  }
+}
+
+// コンテンツ
+@mixin before-content($content: null){
+	position: absolute;
+	content: '#{$content}';
+	display: block;
+	left: 0px;
+}
+
+//flexbox
+@mixin flexbox{
+	display:-webkit-box; // old
+	display:-moz-box; // old
+	display:-ms-flexbox; // ie
+	display:-webkit-flex; // new
+	display:flex; // new
+}
+@mixin flex-direction($direction){
+	@if $direction == row-reverse{
+		-webkit-flex-direction:horizontal;
+		-moz-flex-direction:horizontal;
+		-ms-flex-direction:row-reverse;
+		-webkit-flex-direction:row-reverse;
+		flex-direction:row-reverse;
+	}
+	@else{
+		-webkit-flex-direction:horizontal;
+		-moz-flex-direction:horizontal;
+		-ms-flex-direction:row;
+		-webkit-flex-direction:row;
+		flex-direction:row;
+	}
+}
+
+/**
+ *  カラム数とカラム間marginをfloat設定するMixin
+ *  書き方
+ *  @include col(カラム数,PCでのmargin値,'SPでのmargin値');
+ *  @include column-num(2, 0px); spでfloatしない場合3つ目の値は不要
+ */
+
+$num: 2;
+$mr: 1%;
+@mixin column-num($num, $mr, $sp-mr: null){
+	@include clearfix;
+	.col{
+		@include media(pc) {
+			float: left;
+			width: unquote(' calc(( 100% - (#{$mr} * (#{$num} - 1))) / #{$num}) ');
+			margin-right: $mr;
+			vertical-align: top;
+		}
+		@include media(sp) {
+			display: block;
+			width: 100%;
+			margin-bottom: 10px;
+		}
+		@if $num == 2 {
+			&:nth-child(even){
+				@include media(pc) {
+					margin-right: 0 !important;
+				}
+			}
+		}
+		@if $num == 3 {
+			&:nth-child(3n){
+				@include media(pc) {
+					margin-right: 0 !important;
+				}
+			}
+		}
+		@if $num == 4 {
+			&:nth-child(4n){
+				@include media(pc) {
+					margin-right: 0 !important;
+				}
+			}
+		}
+		@if $num == 5 {
+			&:nth-child(5n){
+				@include media(pc) {
+					margin-right: 0 !important;
+				}
+			}
+		}
+		a{
+			display: block;
+			&:hover{
+				opacity: .6;
+				transition: 0.2s ease-out;
+			}
+		}
+		img{
+			max-width: 100%;
+			height: auto;
+			@include media(sp) {
+				margin: 0px auto;
+			}
+		}
+	}
+	//SPではfloatさせない場合
+	&.inline{
+		@include clearfix;
+		.col{
+			@if $sp-mr{
+				@include media(sp) {
+					float: left;
+					width: unquote(' calc(( 100% - (#{$sp-mr} * #{$num} * 2) ) / #{$num}) ');
+					margin: $sp-mr $sp-mr $sp-mr $sp-mr;
+					vertical-align: top;
+				}
+				&:nth-of-type(-n+#{$num}){
+					margin-top: 0;
+				}
+			}
+		}
+		@include media(sp) {
+			margin-right: -#{$sp-mr};
+			margin-left: -#{$sp-mr};
+		}
+	}
+}
+
+

@@ -1,0 +1,58 @@
+@charset "UTF-8";
+/**
+ * off-canvas
+ */
+
+.label-nav-fold {
+    display: block;
+    height: 100%;
+    padding-left: 25px;
+    background-size: 20px 20px;
+    background-position: left top;
+    background-repeat: no-repeat;
+
+    // ホーム
+    &.mod-home {
+        background-image: url(../images/icon-home.svg);
+    }
+
+    // Worldwide
+    &.mod-global {
+        background-image: url(../images/icon-global.svg);
+    }
+
+    // 会社概要
+    &.mod-company {
+        background-image: url(../images/icon-company.svg);
+    }
+
+    // 製品紹介
+    &.mod-product {
+        background-image: url(../images/icon-product.svg);
+    }
+
+    // 株主・投資家の皆様へ
+    &.mod-ir {
+        background-image: url(../images/icon-ir.svg);
+    }
+
+    // ニュースリリース
+    &.mod-news-release {
+        background-image: url(../images/icon-news-release.svg);
+    }
+
+    // リクルート
+    &.mod-recruitment {
+        background-image: url(../images/icon-recruitment.svg);
+    }
+
+    // 環境への取り組み
+    &.mod-ecology {
+        background-image: url(../images/icon-ecology.svg);
+    }
+
+    // お問い合わせ
+    &.mod-recept {
+        background-image: url(../images/icon-recept.svg);
+    }
+}

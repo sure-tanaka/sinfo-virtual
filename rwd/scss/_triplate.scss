@@ -1,0 +1,81 @@
+.triplate{
+	section{
+		@include media(pc) {
+			margin-bottom: 40px;
+		}
+		@include media(sp) {
+			margin-bottom: 20px;
+		}
+	}
+	&.index{
+		h1.ttl-h1{
+			@include media(pc) {
+				background:transparent url('../../partsfeeder/images/bg_ttl01.png') left top no-repeat;
+				background-size: 100%;
+			}
+		}
+		img{
+			@include media(pc) {
+				max-width: 100%;
+			}
+		}
+		.products{
+			&.column-2{
+				@include media(pc) {
+					margin-top: 40px;
+				}
+				@include media(sp) {
+					margin-top: 20px;
+				}
+				@include column-num(2, 20px, 1%);
+				.col{
+					&.width70{
+						@include media(pc) {
+							width: calc(65% - 20px);
+						}
+					}
+					&.width30{
+						@include media(pc) {
+							width: 35%;
+						}
+					}
+					@include media(sp) {
+						margin-bottom: 20px;
+					}
+					dd{
+						margin-top: 5px;
+					}
+				}
+			}
+			&.mt-30{
+				@include media(pc) {
+					margin-top: 30px;
+				}
+			}
+		}
+
+		ul.feature{
+			li{
+				position: relative;
+				font-weight: bold;
+				font-size: 1.23em;
+				padding-left: 1.3em;
+				@include media(pc) {
+					margin-bottom: 15px;
+				}
+				@include media(sp) {
+					margin-bottom: 10px;
+				}
+				&:before{
+					position: absolute;
+					content: '■';
+					font-size: 10px;
+					width: 1em;
+					height: 1em;
+					top: 5px;
+					left: 0;
+				}
+			}
+		}
+	}
+}

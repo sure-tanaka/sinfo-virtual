@@ -1,0 +1,334 @@
+@charset "UTF-8";
+/**
+ * stamp-tile-news
+ * お知らせのタイル
+ */
+
+.stamp-tile-news {
+
+    @include media(gte-middle) {
+        top: 436px;
+        left: 0;
+        padding: 4px;
+        width: 360px;
+        height: 362px;
+        height: 543px;
+    }
+
+    @include media(gte-x-large) {
+        top: 362px;
+        left: 0;
+    }
+
+    .inner-tile {
+        background: $background-color-white;
+
+        @include media(gte-middle) {
+            position: relative;
+            height: 100%;
+            border: 4px solid #ffffff;
+            background: $background-color-white;
+        }
+    }
+}
+
+.header-news {
+    position: relative;
+
+    @include media(small) {
+        padding-top: 10px;
+    }
+
+    @include media(gte-middle) {
+        padding-bottom: 1px;
+        border-bottom: 1px solid $border-color-gray-1;
+    }
+
+    &:before {
+        display: block;
+        content: '';
+        position: absolute;
+        bottom: 1px;
+        width: 100%;
+        height: 32px;
+        background-color: #249725;
+
+        @include media(small) {
+            bottom: 0;
+        }
+    }
+}
+
+.head-news {
+    padding: 5px 10px;
+    font-size: $font-size-large;
+    color: $color-white;
+    background: $background-color-green-1;
+}
+
+.head-news-tab {
+    position: relative;
+    overflow: hidden;
+    li {
+        float: left;
+        width: calc(21.8% - 1px);
+        margin-right: 1px;
+        padding: 8px 10px;
+        text-align: center;
+        font-size: $font-size-small;
+        color: #fff;
+        background: #49b94a;
+        cursor: pointer;
+
+        &:nth-child(2) {
+            width: calc(34.6% - 1px);
+
+            @include media(small) {
+                padding: 8px 0;
+                letter-spacing: -0.06em;
+            }
+        }
+
+        &.on {
+            cursor: auto;
+            background: $background-color-green-1;
+        }
+
+        a {
+            color: #fff;
+        }
+    }
+
+}
+
+.news-tab-box {
+    display: none;
+    height: 491px;
+    overflow-y: scroll;
+    padding-right: 5px;
+
+    @include media(small) {
+        height: 380px;
+    }
+
+    &.show {
+        display: block;
+    }
+}
+
+.list-news {
+    padding: 10px;
+
+    @include media(gte-middle) {
+        padding-top: 20px;
+    }
+}
+
+.entry-list-news {
+    position: relative;
+
+    & + .entry-list-news {
+        margin-top: 16px;
+    }
+
+    @include media(gte-middle) {
+        font-size: $font-size-small;
+    }
+
+    .icn {
+        margin: 0 0 0 65px;
+        padding: 2px 7px 1px 7px;
+        font-size: 10px;
+        color: #1b7eee !important;
+        white-space: nowrap;
+        border-radius: 10px;
+        border: 1px solid #1b7eee;
+    }
+}
+
+.date-list-news {
+        padding: 0 10px 15px 0;
+        color: #777;
+}
+
+.icon-list-news {
+    display: inline-block;
+    top: 1px;
+    position: absolute;
+    width: 5.4em;
+    height: 1.6em;
+    line-height: 1.5em;
+    text-align: center;
+    font-size: 10px;
+
+    &.ir {
+        color: #fff;
+        border: 1px solid #3fb5bf;
+        background-color: #3fb5bf;
+        &:before {
+            position: absolute;
+            content: "IR";
+            display: block;
+            left: 0px;
+            left: 2em;
+            top: 0em;
+        }
+    }
+
+    &.exhibition {
+        color: #fff;
+        background-color: #c8882d;
+        border: 1px solid #c8882d;
+        &:before {
+            position: absolute;
+            content: "展示会";
+            display: block;
+            left: 0px;
+            left: 1.1em;
+            top: 0em;
+        }
+    }
+
+    &.release {
+        color: #fff;
+        border: 1px solid #f4795b;
+        background-color: #f4795b;
+        &:before {
+            position: absolute;
+            content: "リリース";
+            display: block;
+            left: 0px;
+            left: 0.55em;
+            top: 0em;
+        }
+    }
+
+    &.community {
+        color: #fff;
+        border: 1px solid #49b94a;
+        background-color: #49b94a;
+        &:before {
+            position: absolute;
+            content: "地域貢献";
+            display: block;
+            left: 0px;
+            left: 0.55em;
+            top: 0em;
+        }
+    }
+
+    &.news {
+        color: #fff;
+        border: 1px solid #49b94a;
+        background-color: #49b94a;
+        &:before {
+            position: absolute;
+            content: "お知らせ";
+            display: block;
+            left: 0px;
+            left: 0.65em;
+            top: 0em;
+        }
+    }
+
+    &.recruitment {
+        color: #fff;
+        border: 1px solid #b85dc8;
+        background-color: #b85dc8;
+        &:before {
+            position: absolute;
+            content: "新卒採用";
+            display: block;
+            left: 0px;
+            left: 0.65em;
+            top: 0em;
+        }
+    }
+}
+
+.lead-list-news {
+    margin-top: 5px;
+
+    a.mod-new {
+
+        &:after {
+            position: relative;
+            top: 1px;
+            display: inline-block;
+            content: '';
+            width: 36px;
+            height: 13px;
+            margin-left: 5px;
+            background: url(../images/icon-new.png) 0 0 no-repeat;
+            background-size: 100% auto;
+        }
+    }
+}
+
+.menu-news {
+    @include clearfix;
+    @include media(gte-middle) {
+        width: 100%;
+        position: absolute;
+        bottom: 4px;
+    }
+    @include media(small) {
+        padding: 10px;
+    }
+}
+
+.entry-menu-news {
+    float: left;
+    border: 1px solid $border-color-gray-1;
+    @include gradient-top-lighten($gradient-color-gray-1, 5%);
+
+    @include media(small) {
+        width: calc(50% - 4px);
+    }
+    @include media(gte-middle) {
+        width: calc(50% - 2px);
+    }
+
+    & + li {
+        @include media(small) {
+            margin-left: 8px;
+        }
+        @include media(gte-middle) {
+            margin-left: 4px;
+        }
+    }
+
+    &.active,
+    &:hover {
+        border: 1px solid $border-color-blue-1;
+
+        a {
+            border: 1px solid $border-color-blue-1;
+        }
+    }
+}
+
+.link-menu-news {
+    display: block;
+    height: 100%;
+    padding: 5px;
+    border: 1px solid $border-color-white;
+    color: $color-black;
+    @include transition;
+
+    span {
+        display: block;
+        position: relative;
+        text-align: center;
+        font-size: $font-size-small;
+        font-weight: bold;
+    }
+}
+
+.top-lead{
+    @include media(small) {
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+}
+

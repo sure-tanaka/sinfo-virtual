@@ -1,0 +1,473 @@
+.company.event{
+  sub{
+    position: relative;
+    bottom: -1px;
+    font-size: 11px;
+  }
+  h1 {
+    @include media(pc) {
+      width: 600px;
+      height: 130px;
+      text-indent: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      background:transparent url('../../company/images/title-event.jpg') left top no-repeat;
+      background-size: 100%;
+    }
+    &.report {
+      @include media(pc) {
+        width: 600px;
+        height: 200px;
+        text-indent: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        background: transparent url("../../company/images/title-report.jpg") left top no-repeat;
+        background-size: 100%;
+      }
+    }
+  }
+  .ttl-event {
+    margin: 30px 0 20px;
+    padding-bottom: 4px;
+    line-height: 1.4;
+    font-weight: bold;
+    font-size: 1.1em;
+    border-bottom: 1px dotted #999;
+    @include media(sp) {
+      margin: 20px 0 15px;
+    }
+    span{
+      position: relative;
+      bottom: 1px;
+      margin-right: .7em;
+      padding: 3px 3px 4px 3px;
+      font-size: 11px;
+      font-weight: normal;
+      color: #fff;
+      background:#ff8700;
+    }
+  }
+  .ttl-event-bar.finished+.box-event{
+    margin-top: 0;
+  }
+
+  .event-link{
+    margin-top:5px;
+    text-align:right;
+    a{
+      padding-left:17px;
+      background:url(../images/icn_arrow.gif) no-repeat left center;
+    }
+  }
+  .box-event {
+    width: 570px;
+    margin: 0 auto 100px;
+    @include media(sp) {
+      width: auto;
+    }
+    &.finished {
+      margin-top: 60px;
+      margin-bottom: 0px;
+      padding-bottom: 60px;
+      border-bottom: 3px solid #009e01;
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+  .box-event .event-info {
+    padding: 10px 0;
+    background-color: #bdd6da;
+    @include media(sp) {
+      padding: 5px 15px;
+    }
+  }
+  .box-event dl{
+    display: table;
+    width: 100%;
+    padding: 0 15px;
+    box-sizing: border-box;
+    @include media(sp) {
+      display: block;
+      margin: 15px 0;
+      padding: 0;
+    }
+    dt {
+      display: table-cell;
+      @include media(sp) {
+        display: block;
+        width: auto;
+        margin-bottom: 5px;
+        padding: 0;
+        font-weight: bold;
+      }
+    }
+    dd {
+      display: table-cell;
+      width: calc( 100% - 4em);
+      padding: 3px 0;
+      @include media(sp) {
+        display: block;
+        width: auto;
+        padding: 0;
+        font-size: 1.3rem;
+      }
+    }
+  }
+  .box-event.insession .event-info{
+    background:#ffe282;
+    .dl-event{
+      dt span{
+        color: #777;
+      }
+      dd{
+        color: #000;
+      }
+    }
+  }
+  .event-info .dl-event {
+    @include media(sp) {
+      margin: 10px 0;
+    }
+  }
+  .dl-event {
+
+    dt{
+      width: 4em;
+      padding: 3px 0;
+      span{
+        padding: 3px .7em;
+        text-align: center;
+        color: #537479;
+        background:#fff;
+        border-radius: 3px 3px;
+      }
+    }
+    dd{
+      color: #274347;
+      span{
+        padding: 3px .7em;
+        text-align: center;
+        background:#fff;
+        border-radius: 3px 3px;
+      }
+    }
+  }
+
+  dl.exhibits {
+    @include media(pc) {
+      margin: 15px 0;
+    }
+    dt{
+      @include media(pc) {
+        width: 20%;
+      }
+    }
+    dd{
+      @include media(pc) {
+        width: 80%;
+      }
+    }
+  }
+  .dot-list-event li {
+    position: relative;
+    padding-left: 15px;
+    @include media(sp) {
+      margin-top: 5px;
+    }
+  }
+  .dot-list-event li:before {
+    display: block;
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+    background-color: #009e01;
+  }
+  .ttl-event-bar {
+    padding: 5px 15px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #fff;
+    background-color: #999;
+    span.tri_down{
+      position: relative;
+      padding-left: 30px;
+      &:before{
+        @include before-content();
+        top: -2px;
+        width: 20px;
+        height: 20px;
+        background:transparent url('../../company/images/tri_down.png') left center no-repeat;
+        background-size: 100%;
+      }
+    }
+  }
+  .txt-img-event {
+    margin: 20px 0;
+    overflow: hidden;
+    @include media(sp) {
+      margin: 15px 0;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .img {
+      @include media(pc) {
+        position: relative;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-direction: row;
+        flex-wrap: wrap;
+        min-height: 252px;
+      }
+      @include media(sp) {
+        width: 100%;
+        margin: 15px 0 0;
+      }
+      li{
+        figure {
+          vertical-align: top;
+          @include media(sp) {
+            margin: 0 0 15px 0;
+            width: 100%;
+          }
+          &:nth-child(2){
+            @include media(pc) {
+              margin-top: 6px;
+            }
+          }
+        }
+      }
+      &.direction{
+        >:nth-child(1){
+          @include media(pc) {
+            width: 184px;
+          }
+        }
+        >:nth-child(2){
+          @include media(pc) {
+            width: 377px;
+          }
+        }
+      }
+      &.reverse{
+        >:nth-child(1){
+          @include media(pc) {
+            width: 377px;
+          }
+        }
+        >:nth-child(2){
+          @include media(pc) {
+            width: 184px;
+          }
+        }
+      }
+      &.column{
+        min-height: 138px;
+        >:nth-child(1){
+          @include media(pc) {
+            width: 377px;
+          }
+          @include media(sp) {
+            margin-bottom: 15px;
+          }
+        }
+        >:nth-child(2){
+          @include media(pc) {
+            width: 184px;
+          }
+        }
+      }
+      &.box{
+        li{
+          &.vert{
+            @include media(pc) {
+              width: 36%;
+            }
+          }
+          &.hori{
+            @include media(pc) {
+              width: 63%;
+            }
+          }
+          &:nth-child(n+3){
+            @include media(pc) {
+              margin-top: 10px;
+            }
+          }
+          figure > img{
+            @include media(pc) {
+              height: 266px;
+              width: auto;
+            }
+          }
+        }
+      }
+      img{
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+      }
+    }
+    .txt {
+      margin-top: 10px;
+      @include media(sp) {
+        width: 100%;
+      }
+    }
+  }
+  .ttl-information {
+    display: block;
+    margin-bottom: 8px;
+    padding: 3px 15px;
+    color: #fff;
+    text-align: center;
+    background-color: #00a700;
+    border: 1px solid #eee;
+    @include media(sp) {
+      width: 100%;
+    }
+  }
+  .list-event-link {
+    width: 570px;
+    margin: 20px auto 0;
+    overflow: hidden;
+    @include media(sp) {
+      width: auto;
+    }
+    li {
+      display: block;
+      float: left;
+      width: 70px;
+      text-align: center;
+      background: url('../../ir/images/link_border.gif') no-repeat left center;
+      @include media(pc) {
+        &:last-child {
+          width: 71px;
+          background: url('../../ir/images/link_border.gif') no-repeat left center,
+                      url('../../ir/images/link_border.gif') no-repeat right center;
+        }
+      }
+      @include media(sp) {
+        width: calc(100% / 3);
+        margin-right: -1px;
+        margin-bottom: 5px;
+        background: url('../../ir/images/link_border.gif') no-repeat left center,
+                    url('../../ir/images/link_border.gif') no-repeat right center;
+      }
+    }
+  }
+}
+
+/* report */ 
+@media print, screen and (min-width: 768px) {
+  .company.event.report h1 {
+    background: transparent url("../../company/images/title-report.jpg") left top no-repeat;
+    background-size: 100%;
+  }
+}
+.company.event.report .ttl-report {
+  margin: 20px 0px 10px 0px;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+.company.event.report .report-box {
+  margin-top: 30px;
+}
+.company.event.report .report-box .txt {
+  font-size: 12px;
+  line-height: 1.5;
+}
+.company.event.report .report-box figure {
+  text-align: center;
+}
+.company.event.report .report-box figure > img {
+  max-width: 100%;
+}
+.company.event.report .report-box .flex-box {
+  margin-top: 20px;
+}   
+@media print, screen and (min-width: 768px) {
+  .company.event.report .report-box .flex-box {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+}
+@media print, screen and (min-width: 768px) {
+  .company.event.report .report-box .flex-box .img {
+    width: 180px;   
+    margin: 0px 10px 10px 10px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .company.event.report .report-box .flex-box .img {
+    margin-top: 20px;
+  }
+}
+.company.event.report .report-box .flex-box .img.left {
+  margin-left: 0px;
+}
+.company.event.report .report-box .flex-box .img.right {
+  margin-right: 0px; 
+}
+.company.event.report .report-box .flex-box .img figure:not(:first-child) {
+  margin-top: 10px;   
+}
+@media screen and (max-width: 767px) {
+  .company.event.report .report-box .flex-box .img + .txt {
+    margin-top: 20px;
+  }
+}
+@media print, screen and (min-width: 768px) {
+  .company.event.report .report-box .flex-box .txt {
+    width: 380px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .company.event.report .report-box .flex-box .txt {
+    margin-top: 10px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .company.event.report .report-box .flex-box-sp {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: 0;
+    &:first-child {
+      .txt {
+        margin-top: 0;
+      }
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  .company.event.report .report-box .flex-box-sp .img {
+    order:2;
+  }
+}
+@media screen and (max-width: 767px) {
+  .company.event.report .report-box .flex-box-sp .txt {
+    order:1;
+    margin-top: 20px;
+  }
+}
+.company.event.report .report-box .blog-box .img {
+  margin: 20px auto;
+}
+@media print, screen and (min-width: 768px) {
+  .company.event.report .report-box .blog-box .img {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .company.event.report .report-box .blog-box .img {
+    margin: 60%;
+  }
+}

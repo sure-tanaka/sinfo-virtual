@@ -1,0 +1,48 @@
+.mechatro{
+	h1.ttl-h1{
+		@include media(pc) {
+			background:transparent url('../../mechatro/images/bg_ttl01.png') left top no-repeat;
+			background-size: 100%;
+		}
+	}
+	&.index{
+		.mainvisual{
+			@include media(sp) {
+				padding: 0px 10px;
+			}
+		}
+		.lead{
+			@include media(pc) {
+				margin: 20px 0px 0px 0px;
+			}
+			@include media(sp) {
+				margin-top: 10px;
+				padding: 0px 10px;
+			}
+		}
+		.column-3{
+			@include column-num(3, 10px, 1%);
+			.col{
+				/*IEハック*/
+				@supports (-ms-ime-align: auto) {
+					width: 193px;
+				}
+				text-align: center;
+				@include media(pc) {
+					margin-top: 20px;
+				}
+				@include media(sp) {
+					margin-bottom: 20px;
+				}
+				img{
+					@include media(pc) {
+						margin-bottom: 10px;
+					}
+					@include media(sp) {
+						margin-bottom: 5px;
+					}
+				}
+			}
+		}
+	}
+}
