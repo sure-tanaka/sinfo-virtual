@@ -165,7 +165,7 @@ img {
   width: 100%;
   @include media(pc) {
     background: transparent url(../images/index/mainvisual_bg_pc.png) bottom center no-repeat;
-    background-size: cover;
+    background-size: 2560px;
   }
   .inner{
     @include media(sp) {
@@ -173,7 +173,7 @@ img {
       position: relative;
     }
     @include media(pc) {
-      min-height: 885px;
+      min-height: 950px;
     }
 
     img{
@@ -314,52 +314,30 @@ img {
 }
 
 
-$colors :#ef8029, #fce992, #0a509f, #ef8029, #fce992, #0a509f, #ef8029, #fce992, #0a509f, #ef8029, #fce992, #0a509f;
-
-$num : 0;
-@each $color in $colors {
-  $num: $num + 1;
-  $top: random(700) + 160px;
-  $left: random(80) + 10%;
-  $delay: $num * 0.8s;
-
-  .ball#{$num}{
+/*btn-product*/
+.btn-product{
+  @include media(pc) {
     position: absolute;
-    left: $left;
-    top: $top;
-    width: random(5) + 5px;
-    height: random(5) + 5px;
-    background-color: $color;  
-    border-radius: 50%;
-    z-index: 1;
-    opacity: 0;
-    box-shadow: 0 0 .2vw .2vw $color;
-    animation: flash#{$num} $delay ease alternate infinite;
+    bottom: 160px;
+    left: calc((100% - 660px) / 2);
   }
 
-  @keyframes flash#{$num} {
-    0%{
-      opacity: 0;
+  a{
+    display: block;
+    &:hover{
+      opacity: .9;
+      @include transition();
     }
-    100%{
-      opacity: 1;
+  }
+  img{
+    @include media(sp) {
+      width: 70%;
+    }
+    @include media(pc) {
+      max-width: 660px;
     }
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* news area */
@@ -383,7 +361,7 @@ $num : 0;
     display: flex;
     width: 100%;
     padding: 10px 40px;
-    bottom: 100px;
+    bottom: 35px;
     height: 90px;
     overflow: hidden;
     font-size: 14px;
