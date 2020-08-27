@@ -120,7 +120,7 @@ https://github.com/woodroots/infiniteslidev2
 				}
 				
 				$(obj).css({
-					animation: 'infiniteslide' + id + ' ' + getSpeed(num,speed) + 's linear 0s infinite' + reverse
+					animation: 'infiniteslide' + id + ' ' + getSpeed(num,speed) + 's linear 3s infinite' + reverse
 				});
 			}
 			var setStop = function(obj){
