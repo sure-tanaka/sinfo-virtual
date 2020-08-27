@@ -788,6 +788,7 @@ img {
 
 .flag-l {
   position: absolute;
+  z-index: 7;
   top: 25px;
   left: -100px;
 }
@@ -800,6 +801,7 @@ img {
 
 .index-logo {
   position: absolute;
+  z-index: 7;
   top: 30px;
   left: calc((100% - 529px) / 2);
 }
@@ -812,6 +814,7 @@ img {
 
 .flag-r {
   position: absolute;
+  z-index: 7;
   top: 25px;
   right: -100px;
 }
@@ -940,7 +943,7 @@ img {
     transform: translateY(0);
   }
   40% {
-    transform: translateY(-7.2px);
+    transform: translateY(-9.9px);
   }
 }
 
@@ -949,7 +952,7 @@ img {
     transform: translateY(0);
   }
   40% {
-    transform: translateY(-2.7px);
+    transform: translateY(-27.9px);
   }
 }
 
@@ -958,7 +961,7 @@ img {
     transform: translateY(0);
   }
   40% {
-    transform: translateY(-15.9px);
+    transform: translateY(-26.4px);
   }
 }
 
@@ -967,7 +970,7 @@ img {
     transform: translateY(0);
   }
   40% {
-    transform: translateY(-22.2px);
+    transform: translateY(-5.7px);
   }
 }
 
@@ -976,7 +979,7 @@ img {
     transform: translateY(0);
   }
   40% {
-    transform: translateY(-24px);
+    transform: translateY(-1.2px);
   }
 }
 
@@ -985,7 +988,7 @@ img {
     transform: translateY(0);
   }
   40% {
-    transform: translateY(-22.2px);
+    transform: translateY(-23.4px);
   }
 }
 
@@ -994,7 +997,7 @@ img {
     transform: translateY(0);
   }
   40% {
-    transform: translateY(-27.3px);
+    transform: translateY(-27.9px);
   }
 }
 
@@ -1003,7 +1006,7 @@ img {
     transform: translateY(0);
   }
   40% {
-    transform: translateY(-13.5px);
+    transform: translateY(-1.5px);
   }
 }
 
@@ -1012,7 +1015,7 @@ img {
     transform: translateY(0);
   }
   40% {
-    transform: translateY(-24.6px);
+    transform: translateY(-22.8px);
   }
 }
 
@@ -1021,21 +1024,21 @@ img {
     transform: translateY(0);
   }
   40% {
-    transform: translateY(-20.1px);
+    transform: translateY(-15.3px);
   }
 }
 
 .ball1 {
-  position: fixed;
-  left: calc(30% + random(1000) + 10px);
-  top: calc(100px + random(870) + 10px);
-  width: 15px;
-  height: 12px;
+  position: absolute;
+  left: 50%;
+  top: 285px;
+  width: 8px;
+  height: 10px;
   background-color: #ef8029;
   border-radius: 50%;
-  z-index: 5;
+  z-index: 1;
   opacity: 0;
-  box-shadow: 0 0 1vw 1vw #ef8029;
+  box-shadow: 0 0 0.2vw 0.2vw #ef8029;
   animation: flash1 0.8s ease alternate infinite;
 }
 
@@ -1049,17 +1052,17 @@ img {
 }
 
 .ball2 {
-  position: fixed;
-  left: calc(30% + random(1000) + 10px);
-  top: calc(100px + random(870) + 10px);
-  width: 16px;
-  height: 20px;
+  position: absolute;
+  left: 36%;
+  top: 177px;
+  width: 8px;
+  height: 9px;
   background-color: #fce992;
   border-radius: 50%;
-  z-index: 5;
+  z-index: 1;
   opacity: 0;
-  box-shadow: 0 0 1vw 1vw #fce992;
-  animation: flash2 0.8s ease alternate infinite;
+  box-shadow: 0 0 0.2vw 0.2vw #fce992;
+  animation: flash2 1.6s ease alternate infinite;
 }
 
 @keyframes flash2 {
@@ -1072,20 +1075,227 @@ img {
 }
 
 .ball3 {
-  position: fixed;
-  left: calc(30% + random(1000) + 10px);
-  top: calc(100px + random(870) + 10px);
-  width: 16px;
-  height: 12px;
+  position: absolute;
+  left: 33%;
+  top: 664px;
+  width: 6px;
+  height: 7px;
   background-color: #0a509f;
   border-radius: 50%;
-  z-index: 5;
+  z-index: 1;
   opacity: 0;
-  box-shadow: 0 0 1vw 1vw #0a509f;
-  animation: flash3 0.8s ease alternate infinite;
+  box-shadow: 0 0 0.2vw 0.2vw #0a509f;
+  animation: flash3 2.4s ease alternate infinite;
 }
 
 @keyframes flash3 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.ball4 {
+  position: absolute;
+  left: 72%;
+  top: 512px;
+  width: 6px;
+  height: 9px;
+  background-color: #ef8029;
+  border-radius: 50%;
+  z-index: 1;
+  opacity: 0;
+  box-shadow: 0 0 0.2vw 0.2vw #ef8029;
+  animation: flash4 3.2s ease alternate infinite;
+}
+
+@keyframes flash4 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.ball5 {
+  position: absolute;
+  left: 74%;
+  top: 405px;
+  width: 9px;
+  height: 7px;
+  background-color: #fce992;
+  border-radius: 50%;
+  z-index: 1;
+  opacity: 0;
+  box-shadow: 0 0 0.2vw 0.2vw #fce992;
+  animation: flash5 4s ease alternate infinite;
+}
+
+@keyframes flash5 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.ball6 {
+  position: absolute;
+  left: 20%;
+  top: 338px;
+  width: 10px;
+  height: 6px;
+  background-color: #0a509f;
+  border-radius: 50%;
+  z-index: 1;
+  opacity: 0;
+  box-shadow: 0 0 0.2vw 0.2vw #0a509f;
+  animation: flash6 4.8s ease alternate infinite;
+}
+
+@keyframes flash6 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.ball7 {
+  position: absolute;
+  left: 90%;
+  top: 447px;
+  width: 7px;
+  height: 9px;
+  background-color: #ef8029;
+  border-radius: 50%;
+  z-index: 1;
+  opacity: 0;
+  box-shadow: 0 0 0.2vw 0.2vw #ef8029;
+  animation: flash7 5.6s ease alternate infinite;
+}
+
+@keyframes flash7 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.ball8 {
+  position: absolute;
+  left: 37%;
+  top: 475px;
+  width: 6px;
+  height: 8px;
+  background-color: #fce992;
+  border-radius: 50%;
+  z-index: 1;
+  opacity: 0;
+  box-shadow: 0 0 0.2vw 0.2vw #fce992;
+  animation: flash8 6.4s ease alternate infinite;
+}
+
+@keyframes flash8 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.ball9 {
+  position: absolute;
+  left: 13%;
+  top: 315px;
+  width: 9px;
+  height: 6px;
+  background-color: #0a509f;
+  border-radius: 50%;
+  z-index: 1;
+  opacity: 0;
+  box-shadow: 0 0 0.2vw 0.2vw #0a509f;
+  animation: flash9 7.2s ease alternate infinite;
+}
+
+@keyframes flash9 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.ball10 {
+  position: absolute;
+  left: 56%;
+  top: 772px;
+  width: 9px;
+  height: 6px;
+  background-color: #ef8029;
+  border-radius: 50%;
+  z-index: 1;
+  opacity: 0;
+  box-shadow: 0 0 0.2vw 0.2vw #ef8029;
+  animation: flash10 8s ease alternate infinite;
+}
+
+@keyframes flash10 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.ball11 {
+  position: absolute;
+  left: 57%;
+  top: 799px;
+  width: 9px;
+  height: 9px;
+  background-color: #fce992;
+  border-radius: 50%;
+  z-index: 1;
+  opacity: 0;
+  box-shadow: 0 0 0.2vw 0.2vw #fce992;
+  animation: flash11 8.8s ease alternate infinite;
+}
+
+@keyframes flash11 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.ball12 {
+  position: absolute;
+  left: 73%;
+  top: 272px;
+  width: 8px;
+  height: 9px;
+  background-color: #0a509f;
+  border-radius: 50%;
+  z-index: 1;
+  opacity: 0;
+  box-shadow: 0 0 0.2vw 0.2vw #0a509f;
+  animation: flash12 9.6s ease alternate infinite;
+}
+
+@keyframes flash12 {
   0% {
     opacity: 0;
   }

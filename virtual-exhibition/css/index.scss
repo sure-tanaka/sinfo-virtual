@@ -188,6 +188,7 @@ img {
     display: none;
   }
   position: absolute;
+  z-index: 7;
   top: 25px;
   left: -100px;
 }
@@ -196,6 +197,7 @@ img {
     display: none;
   }
   position: absolute;
+  z-index: 7;
   top: 30px;
   left: calc((100% - 529px) / 2);
 }
@@ -205,6 +207,7 @@ img {
     display: none;
   }
   position: absolute;
+  z-index: 7;
   top: 25px;
   right: -100px;
 }
@@ -311,24 +314,29 @@ img {
 }
 
 
-$colors :#ef8029, #fce992, #0a509f;
+$colors :#ef8029, #fce992, #0a509f, #ef8029, #fce992, #0a509f, #ef8029, #fce992, #0a509f, #ef8029, #fce992, #0a509f;
 
 $num : 0;
 @each $color in $colors {
   $num: $num + 1;
+  $top: random(700) + 160px;
+  $left: random(80) + 10%;
+  $delay: $num * 0.8s;
+
   .ball#{$num}{
-    position: fixed;
-    left: calc(30% + random(1000) + 10px);
-    top: calc(100px + random(870) + 10px);
-    width: random(10) + 10px;
-    height: random(10) + 10px;
+    position: absolute;
+    left: $left;
+    top: $top;
+    width: random(5) + 5px;
+    height: random(5) + 5px;
     background-color: $color;  
     border-radius: 50%;
-    z-index: 5;
+    z-index: 1;
     opacity: 0;
-    box-shadow: 0 0 1vw 1vw $color;
-    animation: flash#{$num} .8s ease alternate infinite;
+    box-shadow: 0 0 .2vw .2vw $color;
+    animation: flash#{$num} $delay ease alternate infinite;
   }
+
   @keyframes flash#{$num} {
     0%{
       opacity: 0;
