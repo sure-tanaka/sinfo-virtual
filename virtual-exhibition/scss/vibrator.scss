@@ -1,0 +1,27 @@
+@charset "UTF-8";
+@import "common";
+
+
+/* mainvisual area */
+.mainvisual-area{
+  width: 100%;
+  @include media(pc) {
+    background: transparent url(../images/index/mainvisual_bg_pc.png) bottom center no-repeat;
+    background-size: 2560px;
+  }
+  .inner{
+    @include media(sp) {
+      padding: 0;
+      position: relative;
+    }
+    @include media(pc) {
+      min-height: 950px;
+    }
+
+    img{
+      @include media(sp) {
+      }
+    }
+  }
+}
+

@@ -856,7 +856,6 @@ img {
 @media only screen and (min-width: 769px) {
   .product-list li {
     width: 190px;
-    animation: flow01 3s linear infinite;
     transform-origin: 50% 50%;
     margin: 1rem 0 !important;
   }
@@ -943,7 +942,7 @@ img {
     transform: translateY(0);
   }
   40% {
-    transform: translateY(-11.1px);
+    transform: translateY(-14.7px);
   }
 }
 
@@ -952,7 +951,7 @@ img {
     transform: translateY(0);
   }
   40% {
-    transform: translateY(-6.3px);
+    transform: translateY(-15.6px);
   }
 }
 
@@ -961,7 +960,7 @@ img {
     transform: translateY(0);
   }
   40% {
-    transform: translateY(-29.1px);
+    transform: translateY(-4.8px);
   }
 }
 
@@ -970,7 +969,7 @@ img {
     transform: translateY(0);
   }
   40% {
-    transform: translateY(-22.5px);
+    transform: translateY(-23.4px);
   }
 }
 
@@ -979,7 +978,7 @@ img {
     transform: translateY(0);
   }
   40% {
-    transform: translateY(-17.7px);
+    transform: translateY(-17.1px);
   }
 }
 
@@ -988,7 +987,7 @@ img {
     transform: translateY(0);
   }
   40% {
-    transform: translateY(-16.5px);
+    transform: translateY(-20.4px);
   }
 }
 
@@ -997,7 +996,7 @@ img {
     transform: translateY(0);
   }
   40% {
-    transform: translateY(-20.7px);
+    transform: translateY(-21.6px);
   }
 }
 
@@ -1006,7 +1005,7 @@ img {
     transform: translateY(0);
   }
   40% {
-    transform: translateY(-6.6px);
+    transform: translateY(-13.2px);
   }
 }
 
@@ -1015,7 +1014,7 @@ img {
     transform: translateY(0);
   }
   40% {
-    transform: translateY(-3.9px);
+    transform: translateY(-5.7px);
   }
 }
 
@@ -1024,11 +1023,18 @@ img {
     transform: translateY(0);
   }
   40% {
-    transform: translateY(-17.4px);
+    transform: translateY(-6px);
   }
 }
 
 /*btn-product*/
+@media only screen and (max-width: 767px) {
+  .btn-product {
+    position: relative;
+    bottom: 65px;
+  }
+}
+
 @media only screen and (min-width: 769px) {
   .btn-product {
     position: absolute;
@@ -1075,7 +1081,7 @@ img {
     position: absolute;
     width: 96%;
     padding: 10px 20px;
-    bottom: 25px;
+    bottom: -5px;
     left: 2%;
     font-size: 1.4rem;
     font-weight: bold;
