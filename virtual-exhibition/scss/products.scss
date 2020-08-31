@@ -1,0 +1,77 @@
+@charset "UTF-8";
+@import "variables";
+
+/* slider area */
+.slider-area{
+  width: 100%;
+  @include media(sp) {
+
+  }
+  @include media(pc) {
+/*    background: transparent url(../images/vibrator/slider_bg_pc.png) top center no-repeat;*/
+    background-size: 2560px;
+  }
+
+  .inner{
+    @include media(sp) {
+      padding: 0;
+      position: relative;
+    }
+    @include media(pc) {
+      min-height: 950px;
+    }
+  }
+  .slider-block{
+    position: relative;
+  }
+  .slides{
+    justify-content: center;
+    margin: 0 auto;
+    overflow: hidden;
+    li{
+      a{
+        display: block;
+      }
+    }
+  }
+}
+
+
+/*---------------------------------
+
+  vibrator
+
+---------------------------------*/
+.vibrator{
+  .slider-area{
+    width: 100%;
+    @include media(pc) {
+      background: transparent url(../images/vibrator/slider_bg_pc.png) top center no-repeat;
+      background-size: 2560px;
+    }
+  }
+  .slider-bg{
+    position: absolute;
+  }
+  .slider-block{
+    top: 235px;
+    height: 503px;
+    overflow: hidden;
+  }
+  .slides{
+    @include media(sp) {
+      width: 100%;
+    }
+    @include media(pc) {
+      width: 900px;
+      margin: 0px auto;
+    }
+    li{
+      @include media(sp) {
+        width: 100%;
+        text-align: center;
+      }
+
+    }
+  }
+}

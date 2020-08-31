@@ -9,8 +9,8 @@ $(function(){
 
 	// SPグローバルメニュー
 	$('.btn-spmenu').on('click', function(){
-		$('.sp-menu').fadeToggle();
-		$('.overlay').fadeToggle();
+		$('.sp-menu').fadeToggle(400);
+		$('.overlay').fadeToggle(400);
 		$(this).toggleClass('on');
 	});
 });
