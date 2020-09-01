@@ -130,6 +130,27 @@ $bp-pc: 769px;
 }
 
 //-----------------------------------
+// flexセット カラム数ごとのwidth
+//-----------------------------------
+@mixin column-num($num, $margin, $sp){
+  @if $sp{
+    @include media(sp) {
+      width: calc((100% - (#{$margin} * (#{$num} - 1)))/ #{$num});
+    }
+  }@else{
+    @include media(sp) {
+      width: 100%;
+      padding: 0px 10px;
+    }
+  }
+  @include media(pc) {
+    width: calc((100% - (#{$margin} * (#{$num} - 1)))/ #{$num});
+  }
+}
+
+
+
+//-----------------------------------
 // margin padding width
 //-----------------------------------
 $space: 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60;
@@ -149,6 +170,7 @@ $space: 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60;
   //width
   .width-#{$prefix} { width: #{$prefix}'%';}
 }
+
 
 
 //-----------------------------------

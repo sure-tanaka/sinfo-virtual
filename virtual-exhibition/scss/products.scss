@@ -24,6 +24,9 @@
   }
   .slider-block{
     position: relative;
+    @include media(sp) {
+      margin-top: 30px;
+    }
     @include media(pc) {
       top: 235px;
       height: 503px;
@@ -91,8 +94,13 @@
 }
 .bullets{
   position: relative;
-  margin-top: 50px;
   text-align: center;
+  @include media(sp) {
+    margin-top: 30px;
+  }
+  @include media(pc) {
+    margin-top: 50px;
+  }
   .bullet{
     width: 13px;
     height: 13px;
@@ -159,6 +167,84 @@
   }
   &.icon-fonia{
     right: calc(50% - 667px);
+  }
+}
+
+.head-title{
+  @include media(sp) {
+    margin-top: 50px;
+  }
+  .inner{
+    @include media(sp) {
+      padding: 0px 5px;
+    }
+    @include media(pc) {
+      width: 1020px;
+    }
+  }
+}
+.feature{
+  .inner{
+    border-top: 1px solid #008342;
+    @include media(sp) {
+      width: calc(100% - 20px);
+      margin: 0 auto;
+      padding: 0px 10px;
+    }
+    @include media(pc) {
+      width: 970px;
+    }
+  }
+}
+
+.list-feature{
+  justify-content: space-between;
+  li{
+    @include column-num(3,56px,$sp:false);
+  }
+  .ttl-feature{
+    margin: 20px 0 5px 0;
+    font-size: 1.8rem;
+    font-weight: bold;
+    @include media(sp) {
+      margin-top: 40px;;
+    }
+  }
+  .photo{
+    @include media(sp) {
+      text-align: center;
+    }
+  }
+  .detail{
+    font-size: 1.4rem;
+    padding-top: 15px;
+    line-height: 1.8;
+  }
+}
+.bg-gray{
+  border-radius: 8px;
+  background: #efefef;
+}
+.list-btn-area{
+  padding: 30px 80px;
+  .list-btn{
+    justify-content:space-between;
+    li{
+      @include media(sp) {
+        width: 30%;
+      }
+      @include media(pc) {
+        width: 260px;
+      }
+      a{
+        width: 100%;
+        padding: 10px 0px;
+        line-height: 24px;
+        color: #fff;
+        border-radius: 21px;
+        background: #008342;
+      }
+    }
   }
 }
 /*---------------------------------

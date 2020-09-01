@@ -490,6 +490,12 @@
   position: relative;
 }
 
+@media only screen and (max-width: 767px) {
+  .slider-area .slider-block {
+    margin-top: 30px;
+  }
+}
+
 @media only screen and (min-width: 769px) {
   .slider-area .slider-block {
     top: 235px;
@@ -586,8 +592,19 @@
 
 .bullets {
   position: relative;
-  margin-top: 50px;
   text-align: center;
+}
+
+@media only screen and (max-width: 767px) {
+  .bullets {
+    margin-top: 30px;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .bullets {
+    margin-top: 50px;
+  }
 }
 
 .bullets .bullet {
@@ -681,6 +698,117 @@
 
 .serif.icon-fonia {
   right: calc(50% - 667px);
+}
+
+@media only screen and (max-width: 767px) {
+  .head-title {
+    margin-top: 50px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .head-title .inner {
+    padding: 0px 5px;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .head-title .inner {
+    width: 1020px;
+  }
+}
+
+.feature .inner {
+  border-top: 1px solid #008342;
+}
+
+@media only screen and (max-width: 767px) {
+  .feature .inner {
+    width: calc(100% - 20px);
+    margin: 0 auto;
+    padding: 0px 10px;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .feature .inner {
+    width: 970px;
+  }
+}
+
+.list-feature {
+  justify-content: space-between;
+}
+
+@media only screen and (max-width: 767px) {
+  .list-feature li {
+    width: 100%;
+    padding: 0px 10px;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .list-feature li {
+    width: calc((100% - (56px * (3 - 1)))/ 3);
+  }
+}
+
+.list-feature .ttl-feature {
+  margin: 20px 0 5px 0;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 767px) {
+  .list-feature .ttl-feature {
+    margin-top: 40px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .list-feature .photo {
+    text-align: center;
+  }
+}
+
+.list-feature .detail {
+  font-size: 1.4rem;
+  padding-top: 15px;
+  line-height: 1.8;
+}
+
+.bg-gray {
+  border-radius: 8px;
+  background: #efefef;
+}
+
+.list-btn-area {
+  padding: 30px 80px;
+}
+
+.list-btn-area .list-btn {
+  justify-content: space-between;
+}
+
+@media only screen and (max-width: 767px) {
+  .list-btn-area .list-btn li {
+    width: 30%;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .list-btn-area .list-btn li {
+    width: 260px;
+  }
+}
+
+.list-btn-area .list-btn li a {
+  width: 100%;
+  padding: 10px 0px;
+  line-height: 24px;
+  color: #fff;
+  border-radius: 21px;
+  background: #008342;
 }
 
 /*---------------------------------
