@@ -5,13 +5,17 @@
 /* mainvisual area */
 .mainvisual-area{
   width: 100%;
+  @include media(sp) {
+    background: #f1f9fd url(../images/index/mainvisual_bg_sp.png) bottom center no-repeat;
+    background-size: 100%;
+  }
   @include media(pc) {
     background: transparent url(../images/index/mainvisual_bg_pc.png) bottom center no-repeat;
     background-size: 2560px;
   }
   .inner{
     @include media(sp) {
-      padding: 0;
+      padding: 0 0px 10px 0px;
       position: relative;
     }
     @include media(pc) {
@@ -41,7 +45,7 @@
   position: absolute;
   z-index: 7;
   top: 30px;
-  left: calc((100% - 529px) / 2);
+  left: calc((100% - 576px) / 2);
 }
 
 .flag-r{
@@ -67,7 +71,7 @@
     display: none;
   }
   @include media(pc) {
-    top: 180px;
+    top: 235px;
   }
   li{
     position: absolute;
@@ -159,12 +163,11 @@
 .btn-product{
   @include media(sp) {
     position: relative;
-    bottom: 65px;
   }
   @include media(pc) {
     position: absolute;
-    bottom: 160px;
-    left: calc((100% - 660px) / 2);
+    bottom: 140px;
+    left: calc((100% - 220px) / 2);
   }
 
   a{
@@ -176,10 +179,10 @@
   }
   img{
     @include media(sp) {
-      width: 70%;
+      width: 40%;
     }
     @include media(pc) {
-      max-width: 660px;
+      width: 220px;
     }
   }
 }
@@ -193,11 +196,10 @@
   border-radius: 8px;
   box-shadow: 2px 2px 20px 5px rgba(0, 0, 0, 0.1);
   @include media(sp) {
-    position: absolute;
+    position: relative;
     width: 96%;
     padding: 10px 20px;
-    bottom: -5px;
-    left: 2%;
+    margin: 10px auto;
     font-size: 1.4rem;
     font-weight: bold;
   }
@@ -331,6 +333,62 @@
     a{
       color: #fff;
       background: #008342;
+    }
+  }
+}
+
+
+/* loading */
+.loading{
+  display: none;
+  width: 300px;
+  height: 14px;
+  background: #5fb554;
+  position: fixed;
+  bottom: calc(50% - 7px);
+  left: calc(50% - 150px);
+  z-index: 1001;
+  border-radius: 7px;
+  overflow: hidden;
+}
+.bar{
+/*  width: 0;*/
+  width: 100%;
+  height: 14px;
+  background: #008442;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  transition: all 0.2s linear 0s;
+}
+.loading-bg{
+  display: none;
+//  display: block;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0px;
+  background: #fff;
+  z-index: 1000;
+  .loader{
+    display: none;
+//    display: block;
+    position: fixed;
+    top: calc(50% - 180px);
+    left: calc(50% - 288px);
+    text-align: center;
+    z-index: 18;
+    opacity: 0;
+    transition: all 0.3s;
+  }
+  &.on{
+    opacity: 1;
+    transition: all 0.3s;
+    .loader{
+      opacity: 1;
+      transition: all 0.3s;
     }
   }
 }

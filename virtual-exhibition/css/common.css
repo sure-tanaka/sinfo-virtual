@@ -459,6 +459,7 @@
  */
 @media only screen and (max-width: 767px) {
   .btn-spmenu {
+    display: none;
     position: fixed;
     z-index: 100;
     top: 80px;
@@ -724,7 +725,7 @@ img {
 
 .ttl-h2 i img {
   max-height: 100%;
-  margin-right: 5px;
+  margin-right: 20px;
 }
 
 /* h3 */

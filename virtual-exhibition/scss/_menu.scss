@@ -6,7 +6,7 @@
 
 .btn-spmenu{
   @include media(sp) {
-//    display: block;
+    display: none;
     position: fixed;
     z-index: 100;
     top: 80px;
@@ -93,6 +93,7 @@ div.overlay{
 /**
  * products sp-menu
  */
+
 .products .btn-spmenu{
   display: block;
   z-index: 100;

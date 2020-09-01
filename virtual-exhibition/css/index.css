@@ -459,6 +459,13 @@
   width: 100%;
 }
 
+@media only screen and (max-width: 767px) {
+  .mainvisual-area {
+    background: #f1f9fd url(../images/index/mainvisual_bg_sp.png) bottom center no-repeat;
+    background-size: 100%;
+  }
+}
+
 @media only screen and (min-width: 769px) {
   .mainvisual-area {
     background: transparent url(../images/index/mainvisual_bg_pc.png) bottom center no-repeat;
@@ -468,7 +475,7 @@
 
 @media only screen and (max-width: 767px) {
   .mainvisual-area .inner {
-    padding: 0;
+    padding: 0 0px 10px 0px;
     position: relative;
   }
 }
@@ -502,7 +509,7 @@
   position: absolute;
   z-index: 7;
   top: 30px;
-  left: calc((100% - 529px) / 2);
+  left: calc((100% - 576px) / 2);
 }
 
 @media only screen and (max-width: 767px) {
@@ -543,7 +550,7 @@
 
 @media only screen and (min-width: 769px) {
   .product-list {
-    top: 180px;
+    top: 235px;
   }
 }
 
@@ -641,7 +648,7 @@
     transform: translateY(0);
   }
   40% {
-    transform: translateY(-7.2px);
+    transform: translateY(-19.8px);
   }
 }
 
@@ -650,7 +657,7 @@
     transform: translateY(0);
   }
   40% {
-    transform: translateY(-2.4px);
+    transform: translateY(-0.6px);
   }
 }
 
@@ -659,7 +666,7 @@
     transform: translateY(0);
   }
   40% {
-    transform: translateY(-27.3px);
+    transform: translateY(-10.2px);
   }
 }
 
@@ -668,7 +675,7 @@
     transform: translateY(0);
   }
   40% {
-    transform: translateY(-11.4px);
+    transform: translateY(-15.6px);
   }
 }
 
@@ -677,7 +684,7 @@
     transform: translateY(0);
   }
   40% {
-    transform: translateY(-10.8px);
+    transform: translateY(-11.1px);
   }
 }
 
@@ -686,7 +693,7 @@
     transform: translateY(0);
   }
   40% {
-    transform: translateY(-22.2px);
+    transform: translateY(-15px);
   }
 }
 
@@ -695,7 +702,7 @@
     transform: translateY(0);
   }
   40% {
-    transform: translateY(-0.9px);
+    transform: translateY(-29.7px);
   }
 }
 
@@ -704,7 +711,7 @@
     transform: translateY(0);
   }
   40% {
-    transform: translateY(-7.8px);
+    transform: translateY(-9.3px);
   }
 }
 
@@ -713,7 +720,7 @@
     transform: translateY(0);
   }
   40% {
-    transform: translateY(-20.1px);
+    transform: translateY(-22.5px);
   }
 }
 
@@ -722,7 +729,7 @@
     transform: translateY(0);
   }
   40% {
-    transform: translateY(-24.3px);
+    transform: translateY(-13.2px);
   }
 }
 
@@ -730,15 +737,14 @@
 @media only screen and (max-width: 767px) {
   .btn-product {
     position: relative;
-    bottom: 65px;
   }
 }
 
 @media only screen and (min-width: 769px) {
   .btn-product {
     position: absolute;
-    bottom: 160px;
-    left: calc((100% - 660px) / 2);
+    bottom: 140px;
+    left: calc((100% - 220px) / 2);
   }
 }
 
@@ -756,13 +762,13 @@
 
 @media only screen and (max-width: 767px) {
   .btn-product img {
-    width: 70%;
+    width: 40%;
   }
 }
 
 @media only screen and (min-width: 769px) {
   .btn-product img {
-    max-width: 660px;
+    width: 220px;
   }
 }
 
@@ -777,11 +783,10 @@
 
 @media only screen and (max-width: 767px) {
   .news-area {
-    position: absolute;
+    position: relative;
     width: 96%;
     padding: 10px 20px;
-    bottom: -5px;
-    left: 2%;
+    margin: 10px auto;
     font-size: 1.4rem;
     font-weight: bold;
   }
@@ -965,6 +970,64 @@
 .list-schedule li .btn a {
   color: #fff;
   background: #008342;
+}
+
+/* loading */
+.loading {
+  display: none;
+  width: 300px;
+  height: 14px;
+  background: #5fb554;
+  position: fixed;
+  bottom: calc(50% - 7px);
+  left: calc(50% - 150px);
+  z-index: 1001;
+  border-radius: 7px;
+  overflow: hidden;
+}
+
+.bar {
+  /*  width: 0;*/
+  width: 100%;
+  height: 14px;
+  background: #008442;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  transition: all 0.2s linear 0s;
+}
+
+.loading-bg {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0px;
+  background: #fff;
+  z-index: 1000;
+}
+
+.loading-bg .loader {
+  display: none;
+  position: fixed;
+  top: calc(50% - 180px);
+  left: calc(50% - 288px);
+  text-align: center;
+  z-index: 18;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.loading-bg.on {
+  opacity: 1;
+  transition: all 0.3s;
+}
+
+.loading-bg.on .loader {
+  opacity: 1;
+  transition: all 0.3s;
 }
 
 /*# sourceMappingURL=index.css.map */
