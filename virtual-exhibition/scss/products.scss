@@ -5,7 +5,8 @@
 .slider-area{
   width: 100%;
   @include media(sp) {
-
+/*    background: transparent url(../images/vibrator/slider_bg_sp.png) top center no-repeat;*/
+    background-size: 100%;
   }
   @include media(pc) {
 /*    background: transparent url(../images/vibrator/slider_bg_pc.png) top center no-repeat;*/
@@ -18,47 +19,21 @@
       position: relative;
     }
     @include media(pc) {
-      min-height: 950px;
+      min-height: 870px;
     }
   }
   .slider-block{
     position: relative;
+    @include media(pc) {
+      top: 235px;
+      height: 503px;
+    }
   }
   .slides{
     justify-content: center;
     margin: 0 auto;
     overflow: hidden;
-    li{
-      a{
-        display: block;
-      }
-    }
-  }
-}
 
-
-/*---------------------------------
-
-  vibrator
-
----------------------------------*/
-.vibrator{
-  .slider-area{
-    width: 100%;
-    @include media(pc) {
-      background: transparent url(../images/vibrator/slider_bg_pc.png) top center no-repeat;
-      background-size: 2560px;
-    }
-  }
-  .slider-bg{
-    position: absolute;
-  }
-  .slider-block{
-    top: 235px;
-    height: 503px;
-    overflow: hidden;
-  }
-  .slides{
     @include media(sp) {
       width: 100%;
     }
@@ -67,11 +42,153 @@
       margin: 0px auto;
     }
     li{
+      text-align: center;
       @include media(sp) {
-        width: 100%;
+        display: none;
         text-align: center;
       }
+      .btn-detail{
+        opacity: 0;
+/*        opacity: 1;*/
 
+        @include transition();
+        @include media(sp) {
+          max-width: 380px;
+        }
+        @include media(pc) {
+          width: 200px;
+        }
+      }
+      a{
+        display: block;
+      }
+      a:hover{
+        .btn-detail{
+          opacity: 1;
+          @include transition(0.7);
+        }
+      }
+      &.on{
+        @include media(sp) {
+          display: block;
+        }
+        .btn-detail{
+          @include media(sp) {
+            opacity: 1;
+            @include transition(0.7);
+          }
+        }
+      }
+      img{
+        @include media(sp) {
+          width: 58%;
+          max-width: 400px;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}
+.bullets{
+  position: relative;
+  margin-top: 50px;
+  text-align: center;
+  .bullet{
+    width: 13px;
+    height: 13px;
+    display: inline-block;
+    border-radius: 100%;
+    background: #e8e8e8;
+    &.active{
+      background: #0f951c;
+    }
+  }
+}
+.arrow{
+  position: absolute;
+  top: 35%;
+  cursor: pointer;
+  &:after{
+    display: block;
+    content:'';
+    @include media(sp) {
+      width: 40px;
+      height: 40px;
+    }
+    @include media(pc) {
+      width: 79px;
+      height: 79px;
+    }
+  }
+  &.left{
+    @include media(sp) {
+      left: 20px;
+    }
+    @include media(pc) {
+      left: -30px;
+    }
+    &:after{
+      background: transparent url(../images/slider_l.png) top center no-repeat;
+      background-size: 100%;
+    }
+  }
+  &.right{
+    @include media(sp) {
+      right: 20px;
+    }
+    @include media(pc) {
+      right: -30px;
+    }
+    &:after{
+      background: transparent url(../images/slider_r.png) top center no-repeat;
+      background-size: 100%;
+    }
+  }
+}
+.serif{
+  @include media(sp) {
+    display: none;
+  }
+  @include media(pc) {
+    display: block;
+    position: absolute;
+    top: 374px;
+  }
+  &.icon-sin{
+    left: calc(50% - 705px);
+  }
+  &.icon-fonia{
+    right: calc(50% - 667px);
+  }
+}
+/*---------------------------------
+
+  vibrator
+
+---------------------------------*/
+.vibrator{
+  .slider-area{
+    @include media(sp) {
+      width: 100%;
+      background: transparent url(../images/vibrator/slider_bg_sp.png) top center no-repeat;
+      background-size: 100%;
+    }
+    @include media(pc) {
+      min-width: 1000px;
+      background: transparent url(../images/vibrator/slider_bg_pc.png) top center no-repeat;
+      background-size: 2560px;
+    }
+  }
+  .slides{
+    li{
+      @include media(pc) {
+        width: calc(100% / 4);
+      }
+      &:nth-child(n+5){
+        @include media(pc) {
+          display: none;
+        }
+      }
     }
   }
 }
