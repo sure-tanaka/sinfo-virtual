@@ -35,7 +35,6 @@
   .slides{
     justify-content: center;
     margin: 0 auto;
-    overflow: hidden;
 
     @include media(sp) {
       width: 100%;
@@ -47,8 +46,8 @@
     li{
       text-align: center;
       @include media(sp) {
-        display: none;
         text-align: center;
+        display: block;
       }
       .btn-detail{
         opacity: 0;
@@ -56,6 +55,8 @@
 
         @include transition();
         @include media(sp) {
+          opacity: 1;
+          @include transition(0.7);
           max-width: 380px;
         }
         @include media(pc) {
@@ -69,17 +70,6 @@
         .btn-detail{
           opacity: 1;
           @include transition(0.7);
-        }
-      }
-      &.on{
-        @include media(sp) {
-          display: block;
-        }
-        .btn-detail{
-          @include media(sp) {
-            opacity: 1;
-            @include transition(0.7);
-          }
         }
       }
       img{
@@ -116,6 +106,7 @@
   position: absolute;
   top: 35%;
   cursor: pointer;
+  z-index: 200;
   &:after{
     display: block;
     content:'';
@@ -133,7 +124,7 @@
       left: 20px;
     }
     @include media(pc) {
-      left: -30px;
+      left: -80px;
     }
     &:after{
       background: transparent url(../images/slider_l.png) top center no-repeat;
@@ -145,7 +136,7 @@
       right: 20px;
     }
     @include media(pc) {
-      right: -30px;
+      right: -80px;
     }
     &:after{
       background: transparent url(../images/slider_r.png) top center no-repeat;
@@ -269,11 +260,6 @@
     li{
       @include media(pc) {
         width: calc(100% / 4);
-      }
-      &:nth-child(n+5){
-        @include media(pc) {
-          display: none;
-        }
       }
     }
   }

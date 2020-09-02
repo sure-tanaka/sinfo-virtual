@@ -1,0 +1,15 @@
+
+dest
+
+.bundle
+.cache
+.DS_Store
+.sass-cache
+
+npm-debug.log
+Thumbs.db
+config.rb
+_notes
+node_modules
+bower_components
+
